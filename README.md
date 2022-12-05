@@ -20,7 +20,7 @@ lr policy="step", warmup="linear", warmup_iters=1000, warmup_ratio=0.001, step=[
 Лосс с немного обрезанным началом, чтобы было нагляднее.
 ![loss](imgs/loss.png "loss")
 
-## Анализ ошибок
+## Анализ ошибок с трешхолдом 0.3
 
 Просмотрел топ 100 плохих распознаваний
 
@@ -55,6 +55,7 @@ lr policy="step", warmup="linear", warmup_iters=1000, warmup_ratio=0.001, step=[
 Лосс с немного обрезанным началом, чтобы было нагляднее.
 ![loss2](imgs/loss2.png "loss2")
 
+## Анализ ошибок с трешхолдом 0.2
 
 Наклоненные фото с плохой разметкой, множественные пересекающиеся боксы.
 ![inclined](bad_predictions/70ec95725913a2d9576a8111e6511551e7bc5583_0.021.jpg "inclined")
@@ -77,6 +78,7 @@ lr policy="step", warmup="linear", warmup_iters=1000, warmup_ratio=0.001, step=[
 
  Лоссы и метрики https://wandb.ai/centernet/CenterNet/runs/2ae7182x?workspace=user-archiealexarkhipov
 
+## Анализ ошибок с трешхолдом 0.2
 Слишком много распознаваний.
 ![alot](bad_predictions/IMG_0521_0.0.jpg "alot")
 
