@@ -1,0 +1,1 @@
+{"mode": "train", "epoch": 1, "iter": 1000, "lr": 0.00125, "memory": 2409, "data_time": 0.15736, "loss_center_heatmap": 8.40217, "loss_wh": 2.06884, "loss_offset": 0.30909, "loss": 10.7801, "grad_norm": 91.1726, "time": 0.55356}

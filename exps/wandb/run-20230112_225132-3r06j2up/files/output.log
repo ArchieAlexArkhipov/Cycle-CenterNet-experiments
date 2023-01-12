@@ -1,0 +1,5 @@
+
+2023-01-12 22:51:34,501 - mmdet - WARNING - No meta information found in the runner.
+[34m[1mwandb[39m[22m:   32 of 32 files downloaded.
+2023-01-12 23:00:45,807 - mmdet - INFO - Epoch [1][1000/1372]	lr: 1.249e-03, eta: 1 day, 6:21:23, time: 0.534, data_time: 0.155, memory: 1880, loss_center_heatmap: 10.2560, loss_wh: 1.9534, loss_offset: 0.2898, loss: 12.4991, grad_norm: 73.0066
+2023-01-12 23:08:35,797 - mmdet - INFO - Epoch(val) [1][452]	loss_center_heatmap: 2.6114, loss_wh: 1.5519, loss_offset: 0.2592, loss: 4.4225
