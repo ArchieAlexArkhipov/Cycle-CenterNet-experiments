@@ -39,3 +39,292 @@
 2023-01-13 13:55:49,305 - mmdet - INFO - Epoch(val) [18][452]	loss_center_heatmap: 0.4425, loss_wh: 0.1023, loss_offset: 0.1500, loss: 0.6948
 2023-01-13 14:05:11,701 - mmdet - INFO - Epoch [19][1000/1372]	lr: 1.250e-03, eta: 2 days, 5:36:25, time: 0.562, data_time: 0.165, memory: 2409, loss_center_heatmap: 0.4422, loss_wh: 0.1088, loss_offset: 0.1499, loss: 0.7008, grad_norm: 5.9647
 2023-01-13 14:13:52,000 - mmdet - INFO - Epoch(val) [19][452]	loss_center_heatmap: 0.4404, loss_wh: 0.0967, loss_offset: 0.1514, loss: 0.6886
+2023-01-13 14:23:57,486 - mmdet - INFO - Epoch [20][1000/1372]	lr: 1.250e-03, eta: 2 days, 3:36:45, time: 0.605, data_time: 0.204, memory: 2409, loss_center_heatmap: 0.4318, loss_wh: 0.1038, loss_offset: 0.1508, loss: 0.6863, grad_norm: 5.8399
+2023-01-13 14:32:37,129 - mmdet - INFO - Epoch(val) [20][452]	loss_center_heatmap: 0.4430, loss_wh: 0.0972, loss_offset: 0.1500, loss: 0.6901
+2023-01-13 14:42:32,247 - mmdet - INFO - Epoch [21][1000/1372]	lr: 1.250e-03, eta: 2 days, 1:46:35, time: 0.595, data_time: 0.191, memory: 2409, loss_center_heatmap: 0.4420, loss_wh: 0.1064, loss_offset: 0.1493, loss: 0.6977, grad_norm: 5.9327
+2023-01-13 14:51:23,219 - mmdet - INFO - Epoch(val) [21][452]	loss_center_heatmap: 0.4223, loss_wh: 0.0967, loss_offset: 0.1500, loss: 0.6690
+2023-01-13 15:01:37,612 - mmdet - INFO - Epoch [22][1000/1372]	lr: 1.250e-03, eta: 2 days, 0:07:33, time: 0.614, data_time: 0.206, memory: 2409, loss_center_heatmap: 0.4274, loss_wh: 0.1012, loss_offset: 0.1476, loss: 0.6762, grad_norm: 5.7688
+2023-01-13 15:10:16,039 - mmdet - INFO - Epoch(val) [22][452]	loss_center_heatmap: 0.4202, loss_wh: 0.0949, loss_offset: 0.1499, loss: 0.6651
+2023-01-13 15:20:43,446 - mmdet - INFO - Epoch [23][1000/1372]	lr: 1.250e-03, eta: 1 day, 22:37:32, time: 0.627, data_time: 0.220, memory: 2409, loss_center_heatmap: 0.4352, loss_wh: 0.1041, loss_offset: 0.1482, loss: 0.6876, grad_norm: 5.9445
+2023-01-13 15:29:07,847 - mmdet - INFO - Epoch(val) [23][452]	loss_center_heatmap: 0.4338, loss_wh: 0.0969, loss_offset: 0.1450, loss: 0.6758
+2023-01-13 15:38:51,230 - mmdet - INFO - Epoch [24][1000/1372]	lr: 1.250e-03, eta: 1 day, 21:10:19, time: 0.583, data_time: 0.176, memory: 2409, loss_center_heatmap: 0.4178, loss_wh: 0.0974, loss_offset: 0.1451, loss: 0.6603, grad_norm: 5.6909
+2023-01-13 15:47:02,217 - mmdet - INFO - Epoch(val) [24][452]	loss_center_heatmap: 0.4187, loss_wh: 0.0973, loss_offset: 0.1439, loss: 0.6599
+2023-01-13 15:56:24,488 - mmdet - INFO - Epoch [25][1000/1372]	lr: 1.250e-03, eta: 1 day, 19:47:36, time: 0.562, data_time: 0.164, memory: 2409, loss_center_heatmap: 0.4217, loss_wh: 0.0995, loss_offset: 0.1453, loss: 0.6666, grad_norm: 5.6518
+2023-01-13 16:04:29,128 - mmdet - INFO - Epoch(val) [25][452]	loss_center_heatmap: 0.4383, loss_wh: 0.0981, loss_offset: 0.1484, loss: 0.6848
+2023-01-13 16:13:54,882 - mmdet - INFO - Epoch [26][1000/1372]	lr: 1.250e-03, eta: 1 day, 18:30:51, time: 0.566, data_time: 0.165, memory: 2409, loss_center_heatmap: 0.4168, loss_wh: 0.0968, loss_offset: 0.1458, loss: 0.6594, grad_norm: 5.5804
+2023-01-13 16:22:13,766 - mmdet - INFO - Epoch(val) [26][452]	loss_center_heatmap: 0.4083, loss_wh: 0.0926, loss_offset: 0.1428, loss: 0.6437
+2023-01-13 16:31:58,479 - mmdet - INFO - Epoch [27][1000/1372]	lr: 1.250e-03, eta: 1 day, 17:20:36, time: 0.585, data_time: 0.183, memory: 2409, loss_center_heatmap: 0.4177, loss_wh: 0.0960, loss_offset: 0.1441, loss: 0.6577, grad_norm: 5.5607
+2023-01-13 16:40:20,835 - mmdet - INFO - Epoch(val) [27][452]	loss_center_heatmap: 0.4134, loss_wh: 0.0948, loss_offset: 0.1417, loss: 0.6499
+2023-01-13 16:49:40,287 - mmdet - INFO - Epoch [28][1000/1372]	lr: 1.250e-03, eta: 1 day, 16:12:51, time: 0.559, data_time: 0.167, memory: 2409, loss_center_heatmap: 0.4118, loss_wh: 0.0942, loss_offset: 0.1435, loss: 0.6495, grad_norm: 5.5450
+2023-01-13 16:58:04,618 - mmdet - INFO - Epoch(val) [28][452]	loss_center_heatmap: 0.4150, loss_wh: 0.1057, loss_offset: 0.1487, loss: 0.6694
+2023-01-13 17:07:32,624 - mmdet - INFO - Epoch [29][1000/1372]	lr: 1.250e-03, eta: 1 day, 15:09:47, time: 0.568, data_time: 0.171, memory: 2409, loss_center_heatmap: 0.4066, loss_wh: 0.0914, loss_offset: 0.1429, loss: 0.6409, grad_norm: 5.4316
+2023-01-13 17:15:41,584 - mmdet - INFO - Epoch(val) [29][452]	loss_center_heatmap: 0.3939, loss_wh: 0.0863, loss_offset: 0.1416, loss: 0.6217
+2023-01-13 17:25:15,210 - mmdet - INFO - Epoch [30][1000/1372]	lr: 1.250e-03, eta: 1 day, 14:10:41, time: 0.574, data_time: 0.171, memory: 2409, loss_center_heatmap: 0.4013, loss_wh: 0.0935, loss_offset: 0.1418, loss: 0.6366, grad_norm: 5.4084
+2023-01-13 17:28:39,140 - mmdet - INFO - Saving checkpoint at 30 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 8.6 task/s, elapsed: 421s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 8.6 task/s, elapsed: 421s, ETA:     0sLoading and preparing results...
+DONE (t=83.46s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3193.85s).
+Accumulating evaluation results...
+2023-01-13 18:36:18,824 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.307
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.637
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.616
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.521
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.685
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.403
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.622
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.777
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.589
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.868
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.716
+DONE (t=70.14s).
+2023-01-13 18:36:32,616 - mmdet - INFO - Epoch(val) [30][3611]	bbox_mAP: 0.3070, bbox_mAP_50: 0.6370, bbox_mAP_75: 0.6160, bbox_mAP_s: 0.5210, bbox_mAP_m: 0.6850, bbox_mAP_l: 0.4130, bbox_mAP_copypaste: 0.307 0.637 0.616 0.521 0.685 0.413
+Loading and preparing results...
+DONE (t=68.78s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3265.30s).
+Accumulating evaluation results...
+DONE (t=70.42s).
+2023-01-13 19:42:45,715 - mmdet - INFO - Epoch(val) [30][452]	loss_center_heatmap: 0.3958, loss_wh: 0.0842, loss_offset: 0.1478, loss: 0.6279
+2023-01-13 19:51:16,654 - mmdet - INFO - Epoch [31][1000/1372]	lr: 1.250e-03, eta: 1 day, 13:10:46, time: 0.511, data_time: 0.110, memory: 3699, loss_center_heatmap: 0.3875, loss_wh: 0.0868, loss_offset: 0.1408, loss: 0.6152, grad_norm: 5.1553
+2023-01-13 19:58:52,633 - mmdet - INFO - Epoch(val) [31][452]	loss_center_heatmap: 0.3937, loss_wh: 0.0916, loss_offset: 0.1431, loss: 0.6284
+2023-01-13 20:07:40,336 - mmdet - INFO - Epoch [32][1000/1372]	lr: 1.250e-03, eta: 1 day, 12:15:08, time: 0.528, data_time: 0.124, memory: 3699, loss_center_heatmap: 0.3940, loss_wh: 0.0896, loss_offset: 0.1408, loss: 0.6243, grad_norm: 5.2766
+2023-01-13 20:15:01,574 - mmdet - INFO - Epoch(val) [32][452]	loss_center_heatmap: 0.4116, loss_wh: 0.0929, loss_offset: 0.1419, loss: 0.6465
+2023-01-13 20:24:17,093 - mmdet - INFO - Epoch [33][1000/1372]	lr: 1.250e-03, eta: 1 day, 11:24:01, time: 0.555, data_time: 0.142, memory: 3699, loss_center_heatmap: 0.3787, loss_wh: 0.0860, loss_offset: 0.1398, loss: 0.6046, grad_norm: 5.1252
+2023-01-13 20:31:44,892 - mmdet - INFO - Epoch(val) [33][452]	loss_center_heatmap: 0.3854, loss_wh: 0.0832, loss_offset: 0.1405, loss: 0.6091
+2023-01-13 20:40:46,959 - mmdet - INFO - Epoch [34][1000/1372]	lr: 1.250e-03, eta: 1 day, 10:34:37, time: 0.542, data_time: 0.134, memory: 3699, loss_center_heatmap: 0.3818, loss_wh: 0.0886, loss_offset: 0.1383, loss: 0.6087, grad_norm: 5.1333
+2023-01-13 20:48:28,999 - mmdet - INFO - Epoch(val) [34][452]	loss_center_heatmap: 0.4054, loss_wh: 0.0866, loss_offset: 0.1442, loss: 0.6362
+2023-01-13 20:57:13,661 - mmdet - INFO - Epoch [35][1000/1372]	lr: 1.250e-03, eta: 1 day, 9:46:34, time: 0.525, data_time: 0.124, memory: 3699, loss_center_heatmap: 0.3881, loss_wh: 0.0857, loss_offset: 0.1399, loss: 0.6137, grad_norm: 5.1800
+2023-01-13 21:04:44,427 - mmdet - INFO - Epoch(val) [35][452]	loss_center_heatmap: 0.3918, loss_wh: 0.0850, loss_offset: 0.1441, loss: 0.6209
+2023-01-13 21:14:12,213 - mmdet - INFO - Epoch [36][1000/1372]	lr: 1.250e-03, eta: 1 day, 9:03:01, time: 0.568, data_time: 0.159, memory: 3699, loss_center_heatmap: 0.3777, loss_wh: 0.0847, loss_offset: 0.1381, loss: 0.6006, grad_norm: 5.1504
+2023-01-13 21:21:57,123 - mmdet - INFO - Epoch(val) [36][452]	loss_center_heatmap: 0.3961, loss_wh: 0.0843, loss_offset: 0.1446, loss: 0.6250
+2023-01-13 21:30:34,691 - mmdet - INFO - Epoch [37][1000/1372]	lr: 1.250e-03, eta: 1 day, 8:18:45, time: 0.518, data_time: 0.117, memory: 3699, loss_center_heatmap: 0.3757, loss_wh: 0.0836, loss_offset: 0.1375, loss: 0.5968, grad_norm: 5.0227
+2023-01-13 21:37:50,738 - mmdet - INFO - Epoch(val) [37][452]	loss_center_heatmap: 0.3791, loss_wh: 0.0793, loss_offset: 0.1368, loss: 0.5951
+2023-01-13 21:46:21,782 - mmdet - INFO - Epoch [38][1000/1372]	lr: 1.250e-03, eta: 1 day, 7:36:03, time: 0.511, data_time: 0.118, memory: 3699, loss_center_heatmap: 0.3676, loss_wh: 0.0805, loss_offset: 0.1360, loss: 0.5841, grad_norm: 5.0140
+2023-01-13 21:53:47,969 - mmdet - INFO - Epoch(val) [38][452]	loss_center_heatmap: 0.3995, loss_wh: 0.0866, loss_offset: 0.1446, loss: 0.6308
+2023-01-13 22:02:19,071 - mmdet - INFO - Epoch [39][1000/1372]	lr: 1.250e-03, eta: 1 day, 6:55:07, time: 0.511, data_time: 0.118, memory: 3699, loss_center_heatmap: 0.3831, loss_wh: 0.0865, loss_offset: 0.1394, loss: 0.6090, grad_norm: 5.1791
+2023-01-13 22:09:56,984 - mmdet - INFO - Epoch(val) [39][452]	loss_center_heatmap: 0.3895, loss_wh: 0.0817, loss_offset: 0.1367, loss: 0.6079
+2023-01-13 22:19:04,702 - mmdet - INFO - Epoch [40][1000/1372]	lr: 1.250e-03, eta: 1 day, 6:17:30, time: 0.548, data_time: 0.147, memory: 3699, loss_center_heatmap: 0.3698, loss_wh: 0.0790, loss_offset: 0.1366, loss: 0.5854, grad_norm: 4.9431
+2023-01-13 22:26:34,182 - mmdet - INFO - Epoch(val) [40][452]	loss_center_heatmap: 0.3789, loss_wh: 0.0800, loss_offset: 0.1414, loss: 0.6003
+2023-01-13 22:35:04,144 - mmdet - INFO - Epoch [41][1000/1372]	lr: 1.250e-03, eta: 1 day, 5:39:36, time: 0.510, data_time: 0.118, memory: 3699, loss_center_heatmap: 0.3725, loss_wh: 0.0844, loss_offset: 0.1365, loss: 0.5934, grad_norm: 5.1645
+2023-01-13 22:42:24,456 - mmdet - INFO - Epoch(val) [41][452]	loss_center_heatmap: 0.3771, loss_wh: 0.0824, loss_offset: 0.1406, loss: 0.6001
+2023-01-13 22:50:46,208 - mmdet - INFO - Epoch [42][1000/1372]	lr: 1.250e-03, eta: 1 day, 5:02:45, time: 0.502, data_time: 0.104, memory: 3699, loss_center_heatmap: 0.3764, loss_wh: 0.0846, loss_offset: 0.1374, loss: 0.5983, grad_norm: 5.1302

@@ -1,4 +1,4 @@
-TEST_NAME = "18_pretrain_resnet18_lr=0.0025"
+TEST_NAME = "18_eval_check_pretrain_resnet18_lr=0.0025"
 
 # DATA AND AUG
 dataset_type = "CocoDataset"
@@ -287,8 +287,8 @@ log_level = "INFO"
 
 
 # EVALUATION
-evaluation = dict(interval=5, metric="bbox")
-checkpoint_config = dict(interval=5)
+evaluation = dict(interval=1, metric="bbox")
+checkpoint_config = dict(interval=1)
 
 
 # RUNTIME

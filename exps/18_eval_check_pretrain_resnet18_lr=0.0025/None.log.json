@@ -1,0 +1,4 @@
+{"mode": "train", "epoch": 1, "iter": 300, "lr": 0.0015, "memory": 1360, "data_time": 0.20043, "loss_center_heatmap": 93.23042, "loss_wh": 0.52624, "loss_offset": 0.20909, "loss": 93.96574, "grad_norm": 903.57899, "time": 0.5818}
+{"mode": "train", "epoch": 1, "iter": 600, "lr": 0.0025, "memory": 1360, "data_time": 0.18844, "loss_center_heatmap": 0.74285, "loss_wh": 0.16916, "loss_offset": 0.18895, "loss": 1.10096, "grad_norm": 8.51598, "time": 0.5506}
+{"mode": "train", "epoch": 1, "iter": 900, "lr": 0.0025, "memory": 1360, "data_time": 0.15805, "loss_center_heatmap": 0.70518, "loss_wh": 0.16566, "loss_offset": 0.18513, "loss": 1.05597, "grad_norm": 7.65939, "time": 0.57819}
+{"mode": "train", "epoch": 1, "iter": 1200, "lr": 0.0025, "memory": 1360, "data_time": 0.20062, "loss_center_heatmap": 0.5977, "loss_wh": 0.1315, "loss_offset": 0.1757, "loss": 0.9049, "grad_norm": 6.44641, "time": 0.58663}

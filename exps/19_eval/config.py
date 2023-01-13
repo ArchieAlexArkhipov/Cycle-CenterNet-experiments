@@ -224,7 +224,7 @@ model = dict(
         loss_offset=dict(type="L1Loss", loss_weight=1.0),
     ),
     train_cfg=None,
-    test_cfg=dict(topk=3000, local_maximum_kernel=1, max_per_img=3000),
+    test_cfg=dict(topk=3000, local_maximum_kernel=3, max_per_img=3000),
 )
 
 
