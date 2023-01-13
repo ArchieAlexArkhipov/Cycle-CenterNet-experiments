@@ -1,0 +1,27 @@
+
+2023-01-13 13:04:48,623 - mmdet - WARNING - No meta information found in the runner.
+[34m[1mwandb[39m[22m:   32 of 32 files downloaded.
+2023-01-13 13:08:13,138 - mmdet - INFO - Epoch [1][300/1372]	lr: 1.496e-03, eta: 12:01:26, time: 0.634, data_time: 0.301, memory: 1360, loss_center_heatmap: 93.2230, loss_wh: 0.5180, loss_offset: 0.2084, loss: 93.9494, grad_norm: 903.5620
+2023-01-13 13:11:05,192 - mmdet - INFO - Epoch [1][600/1372]	lr: 2.500e-03, eta: 11:24:07, time: 0.574, data_time: 0.250, memory: 1360, loss_center_heatmap: 0.7566, loss_wh: 0.1840, loss_offset: 0.1895, loss: 1.1301, grad_norm: 9.5546
+2023-01-13 13:13:57,306 - mmdet - INFO - Epoch [1][900/1372]	lr: 2.500e-03, eta: 11:09:51, time: 0.574, data_time: 0.219, memory: 1360, loss_center_heatmap: 0.6890, loss_wh: 0.1415, loss_offset: 0.1839, loss: 1.0144, grad_norm: 7.1619
+2023-01-13 13:16:54,815 - mmdet - INFO - Epoch [1][1200/1372]	lr: 2.500e-03, eta: 11:06:19, time: 0.592, data_time: 0.264, memory: 1360, loss_center_heatmap: 0.5844, loss_wh: 0.1224, loss_offset: 0.1748, loss: 0.8817, grad_norm: 5.9657
+2023-01-13 13:23:36,372 - mmdet - INFO - Epoch(val) [1][452]	loss_center_heatmap: 0.5463, loss_wh: 0.1092, loss_offset: 0.1750, loss: 0.8306
+2023-01-13 13:26:35,385 - mmdet - INFO - Epoch [2][300/1372]	lr: 2.500e-03, eta: 9:54:17, time: 0.597, data_time: 0.258, memory: 1360, loss_center_heatmap: 0.5544, loss_wh: 0.1216, loss_offset: 0.1722, loss: 0.8482, grad_norm: 5.7038
+Traceback (most recent call last):
+  File "train.py", line 30, in <module>
+    train_detector(model, datasets, cfg, distributed=False, validate=True)
+  File "/home/aiarhipov/mmdetection/mmdet/apis/train.py", line 244, in train_detector
+    runner.run(data_loaders, cfg.workflow)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/epoch_based_runner.py", line 136, in run
+    epoch_runner(data_loaders[i], **kwargs)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/epoch_based_runner.py", line 54, in train
+    self.call_hook('after_train_iter')
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/base_runner.py", line 317, in call_hook
+    getattr(hook, fn_name)(self)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/hooks/logger/base.py", line 158, in after_train_iter
+    self.log(runner)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/hooks/logger/text.py", line 235, in log
+    self._dump_log(log_dict, runner)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/hooks/logger/text.py", line 192, in _dump_log
+    with open(self.json_log_path, 'a+') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/aiarhipov/centernet/exps/17_pretrain_resnet18_lr=0.0025/None.log.json'

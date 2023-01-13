@@ -273,7 +273,11 @@ log_config = dict(
         dict(type="TensorboardLoggerHook"),
         dict(
             type="MMDetWandbHook",
-            init_kwargs={"project": "CenterNet", "name": TEST_NAME},
+            init_kwargs={
+                "project": "CenterNet",
+                "entity": "centernet",
+                "name": TEST_NAME,
+            },
             interval=1000,
             log_checkpoint=True,
             log_checkpoint_metadata=True,

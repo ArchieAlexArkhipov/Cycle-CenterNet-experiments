@@ -1,0 +1,14 @@
+
+2023-01-13 13:44:59,509 - mmdet - WARNING - No meta information found in the runner.
+[34m[1mwandb[39m[22m:   32 of 32 files downloaded.
+2023-01-13 13:48:14,784 - mmdet - INFO - Epoch [1][300/1372]	lr: 1.496e-03, eta: 11:25:39, time: 0.602, data_time: 0.216, memory: 1360, loss_center_heatmap: 93.2184, loss_wh: 0.5207, loss_offset: 0.2083, loss: 93.9474, grad_norm: 903.7827
+2023-01-13 13:51:04,070 - mmdet - INFO - Epoch [1][600/1372]	lr: 2.500e-03, eta: 11:01:05, time: 0.564, data_time: 0.219, memory: 1360, loss_center_heatmap: 0.7251, loss_wh: 0.1621, loss_offset: 0.1874, loss: 1.0746, grad_norm: 8.2346
+2023-01-13 13:53:57,599 - mmdet - INFO - Epoch [1][900/1372]	lr: 2.500e-03, eta: 10:56:19, time: 0.578, data_time: 0.180, memory: 1360, loss_center_heatmap: 0.6884, loss_wh: 0.1532, loss_offset: 0.1838, loss: 1.0254, grad_norm: 7.2580
+2023-01-13 13:56:53,018 - mmdet - INFO - Epoch [1][1200/1372]	lr: 2.500e-03, eta: 10:54:16, time: 0.585, data_time: 0.224, memory: 1360, loss_center_heatmap: 0.5941, loss_wh: 0.1310, loss_offset: 0.1773, loss: 0.9024, grad_norm: 6.6693
+2023-01-13 14:03:42,922 - mmdet - INFO - Epoch(val) [1][452]	loss_center_heatmap: 0.5725, loss_wh: 0.1222, loss_offset: 0.1732, loss: 0.8679
+2023-01-13 14:06:39,516 - mmdet - INFO - Epoch [2][300/1372]	lr: 2.500e-03, eta: 9:44:05, time: 0.589, data_time: 0.241, memory: 1360, loss_center_heatmap: 0.5863, loss_wh: 0.1301, loss_offset: 0.1728, loss: 0.8892, grad_norm: 6.5582
+2023-01-13 14:09:32,268 - mmdet - INFO - Epoch [2][600/1372]	lr: 2.500e-03, eta: 9:50:17, time: 0.576, data_time: 0.238, memory: 1360, loss_center_heatmap: 0.5716, loss_wh: 0.1209, loss_offset: 0.1731, loss: 0.8655, grad_norm: 5.8617
+2023-01-13 14:12:15,064 - mmdet - INFO - Epoch [2][900/1372]	lr: 2.500e-03, eta: 9:49:15, time: 0.543, data_time: 0.184, memory: 1360, loss_center_heatmap: 0.5582, loss_wh: 0.1237, loss_offset: 0.1717, loss: 0.8535, grad_norm: 5.7013
+2023-01-13 14:14:59,036 - mmdet - INFO - Epoch [2][1200/1372]	lr: 2.500e-03, eta: 9:48:19, time: 0.547, data_time: 0.205, memory: 1360, loss_center_heatmap: 0.5401, loss_wh: 0.1155, loss_offset: 0.1665, loss: 0.8220, grad_norm: 5.7306
+2023-01-13 14:21:30,824 - mmdet - INFO - Epoch(val) [2][452]	loss_center_heatmap: 0.4662, loss_wh: 0.0951, loss_offset: 0.1562, loss: 0.7176
+2023-01-13 14:24:18,210 - mmdet - INFO - Epoch [3][300/1372]	lr: 2.500e-03, eta: 9:13:37, time: 0.558, data_time: 0.210, memory: 1360, loss_center_heatmap: 0.4839, loss_wh: 0.1015, loss_offset: 0.1612, loss: 0.7466, grad_norm: 5.0771
