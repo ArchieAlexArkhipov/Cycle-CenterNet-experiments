@@ -219,3 +219,3199 @@ DONE (t=107.34s)
 creating index...
 index created!
 Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3358.42s).
+Accumulating evaluation results...
+DONE (t=93.02s).
+2023-01-13 23:29:48,267 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.256
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.536
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.508
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.307
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.332
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.364
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.559
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.704
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.409
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.812
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.690
+2023-01-13 23:30:02,793 - mmdet - INFO - Epoch(val) [1][3611]	bbox_mAP: 0.2560, bbox_mAP_50: 0.5360, bbox_mAP_75: 0.5080, bbox_mAP_s: 0.3070, bbox_mAP_m: 0.5540, bbox_mAP_l: 0.3320, bbox_mAP_copypaste: 0.256 0.536 0.508 0.307 0.554 0.332
+Loading and preparing results...
+DONE (t=109.85s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3356.87s).
+Accumulating evaluation results...
+DONE (t=94.95s).
+2023-01-14 00:39:29,298 - mmdet - INFO - Epoch(val) [1][452]	loss_center_heatmap: 0.5532, loss_wh: 0.1216, loss_offset: 0.1753, loss: 0.8501
+2023-01-14 00:42:20,754 - mmdet - INFO - Epoch [2][300/1372]	lr: 2.500e-03, eta: 9:34:09, time: 0.571, data_time: 0.182, memory: 2330, loss_center_heatmap: 0.5616, loss_wh: 0.1233, loss_offset: 0.1709, loss: 0.8557, grad_norm: 5.6343
+2023-01-14 00:45:04,925 - mmdet - INFO - Epoch [2][600/1372]	lr: 2.500e-03, eta: 9:37:04, time: 0.547, data_time: 0.172, memory: 2330, loss_center_heatmap: 0.5865, loss_wh: 0.1211, loss_offset: 0.1741, loss: 0.8818, grad_norm: 6.2219
+2023-01-14 00:47:46,009 - mmdet - INFO - Epoch [2][900/1372]	lr: 2.500e-03, eta: 9:36:59, time: 0.537, data_time: 0.130, memory: 2330, loss_center_heatmap: 0.5548, loss_wh: 0.1237, loss_offset: 0.1696, loss: 0.8482, grad_norm: 5.4787
+2023-01-14 00:50:23,779 - mmdet - INFO - Epoch [2][1200/1372]	lr: 2.500e-03, eta: 9:34:53, time: 0.526, data_time: 0.162, memory: 2330, loss_center_heatmap: 0.5382, loss_wh: 0.1105, loss_offset: 0.1684, loss: 0.8170, grad_norm: 5.5536
+[                                                  ] 0/3611, elapsed: 0s, ETA:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.0 task/s, elapsed: 363s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.0 task/s, elapsed: 363s, ETA:     0sLoading and preparing results...
+DONE (t=71.40s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3272.20s).
+Accumulating evaluation results...
+DONE (t=73.97s).
+2023-01-14 02:00:13,338 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.285
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.609
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.577
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.380
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.596
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.378
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.377
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.578
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.724
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.465
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.821
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.707
+2023-01-14 02:00:27,542 - mmdet - INFO - Epoch(val) [2][3611]	bbox_mAP: 0.2850, bbox_mAP_50: 0.6090, bbox_mAP_75: 0.5770, bbox_mAP_s: 0.3800, bbox_mAP_m: 0.5960, bbox_mAP_l: 0.3780, bbox_mAP_copypaste: 0.285 0.609 0.577 0.380 0.596 0.378
+Loading and preparing results...
+DONE (t=81.26s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3308.24s).
+Accumulating evaluation results...
+DONE (t=91.92s).
+2023-01-14 03:09:01,748 - mmdet - INFO - Epoch(val) [2][452]	loss_center_heatmap: 0.4790, loss_wh: 0.1046, loss_offset: 0.1591, loss: 0.7427
+2023-01-14 03:11:56,038 - mmdet - INFO - Epoch [3][300/1372]	lr: 2.500e-03, eta: 9:04:49, time: 0.581, data_time: 0.204, memory: 2330, loss_center_heatmap: 0.4845, loss_wh: 0.1050, loss_offset: 0.1612, loss: 0.7507, grad_norm: 5.0208
+2023-01-14 03:14:36,933 - mmdet - INFO - Epoch [3][600/1372]	lr: 2.500e-03, eta: 9:06:00, time: 0.536, data_time: 0.188, memory: 2330, loss_center_heatmap: 0.4994, loss_wh: 0.1081, loss_offset: 0.1610, loss: 0.7684, grad_norm: 5.1330
+2023-01-14 03:26:02,963 - mmdet - INFO - Epoch [3][900/1372]	lr: 2.500e-03, eta: 11:42:34, time: 2.287, data_time: 0.185, memory: 2330, loss_center_heatmap: 0.4837, loss_wh: 0.1070, loss_offset: 0.1613, loss: 0.7521, grad_norm: 4.7712
+2023-01-14 04:11:28,488 - mmdet - INFO - Epoch [3][1200/1372]	lr: 2.500e-03, eta: 23:10:48, time: 9.085, data_time: 0.012, memory: 2330, loss_center_heatmap: 0.4595, loss_wh: 0.1041, loss_offset: 0.1581, loss: 0.7217, grad_norm: 4.8271
+2023-01-14 04:34:08,704 - mmdet - INFO - Saving checkpoint at 3 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 6.5 task/s, elapsed: 559s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 6.5 task/s, elapsed: 559s, ETA:     0sLoading and preparing results...
+DONE (t=92.65s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=6228.94s).
+Accumulating evaluation results...
+DONE (t=113.69s).
+2023-01-14 06:38:49,894 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.302
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.617
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.594
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.423
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.644
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.424
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.605
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.751
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.503
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.852
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.719
+2023-01-14 06:39:08,245 - mmdet - INFO - Epoch(val) [3][3611]	bbox_mAP: 0.3020, bbox_mAP_50: 0.6170, bbox_mAP_75: 0.5940, bbox_mAP_s: 0.4230, bbox_mAP_m: 0.6440, bbox_mAP_l: 0.4240, bbox_mAP_copypaste: 0.302 0.617 0.594 0.423 0.644 0.424
+Loading and preparing results...
+DONE (t=117.63s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=6347.87s).
+Accumulating evaluation results...
+DONE (t=121.53s).
+2023-01-14 09:33:50,966 - mmdet - INFO - Epoch(val) [3][452]	loss_center_heatmap: 0.4696, loss_wh: 0.0947, loss_offset: 0.1541, loss: 0.7185
+2023-01-14 10:19:51,008 - mmdet - INFO - Epoch [4][300/1372]	lr: 2.500e-03, eta: 1 day, 7:41:40, time: 9.200, data_time: 0.024, memory: 2330, loss_center_heatmap: 0.4817, loss_wh: 0.1007, loss_offset: 0.1578, loss: 0.7402, grad_norm: 4.9137
+2023-01-14 11:00:31,814 - mmdet - INFO - Epoch [4][600/1372]	lr: 2.500e-03, eta: 1 day, 14:43:26, time: 8.136, data_time: 0.011, memory: 2330, loss_center_heatmap: 0.4772, loss_wh: 0.1093, loss_offset: 0.1582, loss: 0.7447, grad_norm: 5.1791
+2023-01-14 11:43:27,820 - mmdet - INFO - Epoch [4][900/1372]	lr: 2.500e-03, eta: 1 day, 21:18:27, time: 8.587, data_time: 0.011, memory: 2330, loss_center_heatmap: 0.4607, loss_wh: 0.0954, loss_offset: 0.1568, loss: 0.7130, grad_norm: 4.6336
+2023-01-14 12:08:24,557 - mmdet - INFO - Epoch [4][1200/1372]	lr: 2.500e-03, eta: 1 day, 23:29:54, time: 4.989, data_time: 0.102, memory: 2330, loss_center_heatmap: 0.4409, loss_wh: 0.0930, loss_offset: 0.1527, loss: 0.6866, grad_norm: 4.5900
+2023-01-14 12:10:04,381 - mmdet - INFO - Saving checkpoint at 4 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.8 task/s, elapsed: 336s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.8 task/s, elapsed: 336s, ETA:     0sLoading and preparing results...
+DONE (t=68.19s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3242.25s).
+Accumulating evaluation results...
+DONE (t=81.47s).
+2023-01-14 13:17:11,859 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.273
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.565
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.536
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.433
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.631
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.380
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.393
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.757
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.522
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.856
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.717
+2023-01-14 13:17:25,752 - mmdet - INFO - Epoch(val) [4][3611]	bbox_mAP: 0.2730, bbox_mAP_50: 0.5650, bbox_mAP_75: 0.5360, bbox_mAP_s: 0.4330, bbox_mAP_m: 0.6310, bbox_mAP_l: 0.3800, bbox_mAP_copypaste: 0.273 0.565 0.536 0.433 0.631 0.380
+Loading and preparing results...
+DONE (t=64.72s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3239.76s).
+Accumulating evaluation results...
+DONE (t=83.34s).
+2023-01-14 14:23:58,415 - mmdet - INFO - Epoch(val) [4][452]	loss_center_heatmap: 0.4298, loss_wh: 0.0890, loss_offset: 0.1547, loss: 0.6735
+2023-01-14 14:27:00,900 - mmdet - INFO - Epoch [5][300/1372]	lr: 2.500e-03, eta: 1 day, 19:50:58, time: 0.608, data_time: 0.242, memory: 2330, loss_center_heatmap: 0.4391, loss_wh: 0.0915, loss_offset: 0.1532, loss: 0.6837, grad_norm: 4.4102
+2023-01-14 14:30:00,212 - mmdet - INFO - Epoch [5][600/1372]	lr: 2.500e-03, eta: 1 day, 18:00:04, time: 0.598, data_time: 0.225, memory: 2330, loss_center_heatmap: 0.4190, loss_wh: 0.0854, loss_offset: 0.1525, loss: 0.6569, grad_norm: 4.5064
+2023-01-14 14:32:59,390 - mmdet - INFO - Epoch [5][900/1372]	lr: 2.500e-03, eta: 1 day, 16:19:16, time: 0.597, data_time: 0.185, memory: 2330, loss_center_heatmap: 0.4498, loss_wh: 0.0994, loss_offset: 0.1537, loss: 0.7029, grad_norm: 4.4679
+2023-01-14 14:35:40,586 - mmdet - INFO - Epoch [5][1200/1372]	lr: 2.500e-03, eta: 1 day, 14:44:29, time: 0.537, data_time: 0.154, memory: 2330, loss_center_heatmap: 0.4576, loss_wh: 0.0935, loss_offset: 0.1552, loss: 0.7063, grad_norm: 5.0184
+2023-01-14 14:37:13,659 - mmdet - INFO - Saving checkpoint at 5 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.3 task/s, elapsed: 352s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.3 task/s, elapsed: 352s, ETA:     0sLoading and preparing results...
+DONE (t=108.46s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3212.28s).
+Accumulating evaluation results...
+2023-01-14 15:45:12,526 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.297
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.612
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.591
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.466
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.666
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.423
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.400
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.763
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.540
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.862
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.714
+DONE (t=82.09s).
+2023-01-14 15:45:26,845 - mmdet - INFO - Epoch(val) [5][3611]	bbox_mAP: 0.2970, bbox_mAP_50: 0.6120, bbox_mAP_75: 0.5910, bbox_mAP_s: 0.4660, bbox_mAP_m: 0.6660, bbox_mAP_l: 0.4230, bbox_mAP_copypaste: 0.297 0.612 0.591 0.466 0.666 0.423
+Loading and preparing results...
+DONE (t=80.87s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3267.09s).
+Accumulating evaluation results...
+DONE (t=75.18s).
+2023-01-14 16:52:46,914 - mmdet - INFO - Epoch(val) [5][452]	loss_center_heatmap: 0.4266, loss_wh: 0.0850, loss_offset: 0.1502, loss: 0.6618
+2023-01-14 16:55:50,287 - mmdet - INFO - Epoch [6][300/1372]	lr: 2.500e-03, eta: 1 day, 12:20:55, time: 0.611, data_time: 0.227, memory: 2330, loss_center_heatmap: 0.4330, loss_wh: 0.0896, loss_offset: 0.1485, loss: 0.6710, grad_norm: 4.3526
+2023-01-14 16:58:46,469 - mmdet - INFO - Epoch [6][600/1372]	lr: 2.500e-03, eta: 1 day, 11:07:03, time: 0.587, data_time: 0.194, memory: 2330, loss_center_heatmap: 0.4095, loss_wh: 0.0861, loss_offset: 0.1497, loss: 0.6453, grad_norm: 4.2281
+2023-01-14 17:01:31,164 - mmdet - INFO - Epoch [6][900/1372]	lr: 2.500e-03, eta: 1 day, 9:57:11, time: 0.549, data_time: 0.178, memory: 2330, loss_center_heatmap: 0.4107, loss_wh: 0.0878, loss_offset: 0.1503, loss: 0.6488, grad_norm: 4.3178
+2023-01-14 17:04:28,101 - mmdet - INFO - Epoch [6][1200/1372]	lr: 2.500e-03, eta: 1 day, 8:53:50, time: 0.590, data_time: 0.232, memory: 2330, loss_center_heatmap: 0.3987, loss_wh: 0.0866, loss_offset: 0.1489, loss: 0.6342, grad_norm: 4.2281
+2023-01-14 17:06:04,968 - mmdet - INFO - Saving checkpoint at 6 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.1 task/s, elapsed: 395s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.1 task/s, elapsed: 395s, ETA:     0sLoading and preparing results...
+DONE (t=93.33s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3251.65s).
+Accumulating evaluation results...
+2023-01-14 18:15:02,244 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.284
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.586
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.565
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.481
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.645
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.374
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.401
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.618
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.769
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.552
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.866
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.719
+DONE (t=84.97s).
+2023-01-14 18:15:17,570 - mmdet - INFO - Epoch(val) [6][3611]	bbox_mAP: 0.2840, bbox_mAP_50: 0.5860, bbox_mAP_75: 0.5650, bbox_mAP_s: 0.4810, bbox_mAP_m: 0.6450, bbox_mAP_l: 0.3740, bbox_mAP_copypaste: 0.284 0.586 0.565 0.481 0.645 0.374
+Loading and preparing results...
+DONE (t=105.30s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3223.78s).
+Accumulating evaluation results...
+DONE (t=81.94s).
+2023-01-14 19:22:13,082 - mmdet - INFO - Epoch(val) [6][452]	loss_center_heatmap: 0.3985, loss_wh: 0.0793, loss_offset: 0.1467, loss: 0.6245
+2023-01-14 19:25:11,168 - mmdet - INFO - Epoch [7][300/1372]	lr: 2.500e-03, eta: 1 day, 7:11:00, time: 0.594, data_time: 0.203, memory: 2330, loss_center_heatmap: 0.4029, loss_wh: 0.0910, loss_offset: 0.1498, loss: 0.6437, grad_norm: 4.3537
+2023-01-14 19:28:06,449 - mmdet - INFO - Epoch [7][600/1372]	lr: 2.500e-03, eta: 1 day, 6:18:11, time: 0.584, data_time: 0.189, memory: 2330, loss_center_heatmap: 0.4034, loss_wh: 0.0837, loss_offset: 0.1497, loss: 0.6368, grad_norm: 4.5323
+2023-01-14 19:30:50,612 - mmdet - INFO - Epoch [7][900/1372]	lr: 2.500e-03, eta: 1 day, 5:27:27, time: 0.547, data_time: 0.155, memory: 2330, loss_center_heatmap: 0.4256, loss_wh: 0.0866, loss_offset: 0.1470, loss: 0.6593, grad_norm: 4.1940
+2023-01-14 19:33:51,622 - mmdet - INFO - Epoch [7][1200/1372]	lr: 2.500e-03, eta: 1 day, 4:41:31, time: 0.603, data_time: 0.172, memory: 2330, loss_center_heatmap: 0.4078, loss_wh: 0.0837, loss_offset: 0.1498, loss: 0.6414, grad_norm: 4.1144
+2023-01-14 19:35:24,508 - mmdet - INFO - Saving checkpoint at 7 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.1 task/s, elapsed: 356s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 10.1 task/s, elapsed: 356s, ETA:     0sLoading and preparing results...
+DONE (t=132.22s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3251.14s).
+Accumulating evaluation results...
+2023-01-14 20:44:48,329 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.259
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.531
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.479
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.625
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.611
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.762
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.552
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.856
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.714
+DONE (t=75.05s).
+2023-01-14 20:45:03,235 - mmdet - INFO - Epoch(val) [7][3611]	bbox_mAP: 0.2590, bbox_mAP_50: 0.5310, bbox_mAP_75: 0.5110, bbox_mAP_s: 0.4790, bbox_mAP_m: 0.6250, bbox_mAP_l: 0.4050, bbox_mAP_copypaste: 0.259 0.531 0.511 0.479 0.625 0.405
+Loading and preparing results...
+DONE (t=98.12s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3216.12s).
+Accumulating evaluation results...
+DONE (t=79.60s).
+2023-01-14 21:52:20,165 - mmdet - INFO - Epoch(val) [7][452]	loss_center_heatmap: 0.4117, loss_wh: 0.0818, loss_offset: 0.1504, loss: 0.6439
+2023-01-14 21:55:27,241 - mmdet - INFO - Epoch [8][300/1372]	lr: 2.500e-03, eta: 1 day, 3:24:52, time: 0.624, data_time: 0.263, memory: 2330, loss_center_heatmap: 0.4024, loss_wh: 0.0831, loss_offset: 0.1480, loss: 0.6336, grad_norm: 4.2365
+2023-01-14 21:58:15,752 - mmdet - INFO - Epoch [8][600/1372]	lr: 2.500e-03, eta: 1 day, 2:44:25, time: 0.562, data_time: 0.157, memory: 2330, loss_center_heatmap: 0.3842, loss_wh: 0.0830, loss_offset: 0.1431, loss: 0.6104, grad_norm: 4.0087
+2023-01-14 22:01:11,702 - mmdet - INFO - Epoch [8][900/1372]	lr: 2.500e-03, eta: 1 day, 2:06:49, time: 0.586, data_time: 0.174, memory: 2330, loss_center_heatmap: 0.3838, loss_wh: 0.0823, loss_offset: 0.1449, loss: 0.6110, grad_norm: 4.0047
+2023-01-14 22:04:12,928 - mmdet - INFO - Epoch [8][1200/1372]	lr: 2.500e-03, eta: 1 day, 1:31:36, time: 0.604, data_time: 0.186, memory: 2330, loss_center_heatmap: 0.3893, loss_wh: 0.0777, loss_offset: 0.1459, loss: 0.6130, grad_norm: 4.1134
+[                                                  ] 0/3611, elapsed: 0s, ETA:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.9 task/s, elapsed: 366s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.9 task/s, elapsed: 366s, ETA:     0sLoading and preparing results...
+DONE (t=74.13s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3152.62s).
+Accumulating evaluation results...
+2023-01-14 23:12:13,047 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.281
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.574
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.553
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.487
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.652
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.624
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.777
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.560
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.872
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.732
+DONE (t=82.29s).
+2023-01-14 23:12:27,148 - mmdet - INFO - Epoch(val) [8][3611]	bbox_mAP: 0.2810, bbox_mAP_50: 0.5740, bbox_mAP_75: 0.5530, bbox_mAP_s: 0.4870, bbox_mAP_m: 0.6520, bbox_mAP_l: 0.4180, bbox_mAP_copypaste: 0.281 0.574 0.553 0.487 0.652 0.418
+Loading and preparing results...
+DONE (t=85.66s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3225.95s).
+Accumulating evaluation results...
+DONE (t=81.95s).
+2023-01-15 00:19:10,494 - mmdet - INFO - Epoch(val) [8][452]	loss_center_heatmap: 0.3889, loss_wh: 0.0770, loss_offset: 0.1436, loss: 0.6095
+2023-01-15 00:22:32,813 - mmdet - INFO - Epoch [9][300/1372]	lr: 2.500e-03, eta: 1 day, 0:32:39, time: 0.674, data_time: 0.303, memory: 2330, loss_center_heatmap: 0.3845, loss_wh: 0.0741, loss_offset: 0.1453, loss: 0.6039, grad_norm: 3.9870
+2023-01-15 00:25:16,866 - mmdet - INFO - Epoch [9][600/1372]	lr: 2.500e-03, eta: 1 day, 0:00:26, time: 0.547, data_time: 0.169, memory: 2330, loss_center_heatmap: 0.3878, loss_wh: 0.0780, loss_offset: 0.1425, loss: 0.6083, grad_norm: 4.0787
+2023-01-15 00:28:29,728 - mmdet - INFO - Epoch [9][900/1372]	lr: 2.500e-03, eta: 23:32:01, time: 0.643, data_time: 0.294, memory: 2330, loss_center_heatmap: 0.3746, loss_wh: 0.0805, loss_offset: 0.1418, loss: 0.5969, grad_norm: 4.0588
+2023-01-15 00:31:16,885 - mmdet - INFO - Epoch [9][1200/1372]	lr: 2.500e-03, eta: 23:02:51, time: 0.557, data_time: 0.194, memory: 2330, loss_center_heatmap: 0.3672, loss_wh: 0.0762, loss_offset: 0.1451, loss: 0.5885, grad_norm: 3.9552
+2023-01-15 00:32:53,377 - mmdet - INFO - Saving checkpoint at 9 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.5 task/s, elapsed: 382s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.5 task/s, elapsed: 382s, ETA:     0sLoading and preparing results...
+DONE (t=99.89s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3211.06s).
+Accumulating evaluation results...
+2023-01-15 01:40:50,958 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.311
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.632
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.611
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.688
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.629
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.780
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.576
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.877
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.720
+DONE (t=79.06s).
+2023-01-15 01:41:04,745 - mmdet - INFO - Epoch(val) [9][3611]	bbox_mAP: 0.3110, bbox_mAP_50: 0.6320, bbox_mAP_75: 0.6110, bbox_mAP_s: 0.5020, bbox_mAP_m: 0.6880, bbox_mAP_l: 0.4340, bbox_mAP_copypaste: 0.311 0.632 0.611 0.502 0.688 0.434
+Loading and preparing results...
+DONE (t=105.25s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3183.45s).
+Accumulating evaluation results...
+DONE (t=82.41s).
+2023-01-15 02:47:32,443 - mmdet - INFO - Epoch(val) [9][452]	loss_center_heatmap: 0.3767, loss_wh: 0.0803, loss_offset: 0.1430, loss: 0.5999
+2023-01-15 02:50:42,155 - mmdet - INFO - Epoch [10][300/1372]	lr: 2.500e-03, eta: 22:14:06, time: 0.632, data_time: 0.226, memory: 2330, loss_center_heatmap: 0.3890, loss_wh: 0.0852, loss_offset: 0.1463, loss: 0.6205, grad_norm: 4.1927
+2023-01-15 02:53:40,252 - mmdet - INFO - Epoch [10][600/1372]	lr: 2.500e-03, eta: 21:48:58, time: 0.594, data_time: 0.159, memory: 2330, loss_center_heatmap: 0.3886, loss_wh: 0.0779, loss_offset: 0.1459, loss: 0.6123, grad_norm: 4.0714
+2023-01-15 02:56:40,011 - mmdet - INFO - Epoch [10][900/1372]	lr: 2.500e-03, eta: 21:24:56, time: 0.599, data_time: 0.151, memory: 2330, loss_center_heatmap: 0.3919, loss_wh: 0.0762, loss_offset: 0.1463, loss: 0.6145, grad_norm: 4.1419
+2023-01-15 02:59:32,911 - mmdet - INFO - Epoch [10][1200/1372]	lr: 2.500e-03, eta: 21:01:23, time: 0.576, data_time: 0.185, memory: 2330, loss_center_heatmap: 0.3813, loss_wh: 0.0825, loss_offset: 0.1431, loss: 0.6069, grad_norm: 4.0897
+2023-01-15 03:01:11,465 - mmdet - INFO - Saving checkpoint at 10 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 5.9 task/s, elapsed: 616s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 5.9 task/s, elapsed: 616s, ETA:     0sLoading and preparing results...
+DONE (t=100.95s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=6256.86s).
+Accumulating evaluation results...
+DONE (t=123.08s).
+2023-01-15 05:07:42,720 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.280
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.539
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.482
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.642
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.431
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.620
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.771
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.864
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.731
+2023-01-15 05:08:01,361 - mmdet - INFO - Epoch(val) [10][3611]	bbox_mAP: 0.2800, bbox_mAP_50: 0.5600, bbox_mAP_75: 0.5390, bbox_mAP_s: 0.4820, bbox_mAP_m: 0.6420, bbox_mAP_l: 0.4310, bbox_mAP_copypaste: 0.280 0.560 0.539 0.482 0.642 0.431
+Loading and preparing results...
+DONE (t=106.71s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=6253.73s).
+Accumulating evaluation results...
+DONE (t=114.89s).
+2023-01-15 07:59:37,711 - mmdet - INFO - Epoch(val) [10][452]	loss_center_heatmap: 0.3787, loss_wh: 0.0823, loss_offset: 0.1392, loss: 0.6001
+2023-01-15 08:43:36,706 - mmdet - INFO - Epoch [11][300/1372]	lr: 2.500e-03, eta: 22:59:42, time: 8.797, data_time: 0.029, memory: 2330, loss_center_heatmap: 0.3596, loss_wh: 0.0709, loss_offset: 0.1426, loss: 0.5731, grad_norm: 3.8647
+2023-01-15 09:28:48,489 - mmdet - INFO - Epoch [11][600/1372]	lr: 2.500e-03, eta: 1 day, 1:14:41, time: 9.039, data_time: 0.012, memory: 2330, loss_center_heatmap: 0.3845, loss_wh: 0.0745, loss_offset: 0.1430, loss: 0.6020, grad_norm: 4.1129
+2023-01-15 10:11:26,321 - mmdet - INFO - Epoch [11][900/1372]	lr: 2.500e-03, eta: 1 day, 3:12:48, time: 8.526, data_time: 0.012, memory: 2330, loss_center_heatmap: 0.4005, loss_wh: 0.0881, loss_offset: 0.1462, loss: 0.6347, grad_norm: 4.1043
+2023-01-15 10:55:35,645 - mmdet - INFO - Epoch [11][1200/1372]	lr: 2.500e-03, eta: 1 day, 5:09:57, time: 8.831, data_time: 0.012, memory: 2330, loss_center_heatmap: 0.3624, loss_wh: 0.0740, loss_offset: 0.1393, loss: 0.5757, grad_norm: 3.8750
+2023-01-15 11:05:03,173 - mmdet - INFO - Saving checkpoint at 11 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.3 task/s, elapsed: 388s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.3 task/s, elapsed: 388s, ETA:     0sLoading and preparing results...
+DONE (t=96.56s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3238.27s).
+Accumulating evaluation results...
+DONE (t=80.69s).
+2023-01-15 12:13:47,157 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.297
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.603
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.579
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.664
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.421
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.403
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.620
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.772
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.866
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.725
+2023-01-15 12:14:00,733 - mmdet - INFO - Epoch(val) [11][3611]	bbox_mAP: 0.2970, bbox_mAP_50: 0.6030, bbox_mAP_75: 0.5790, bbox_mAP_s: 0.4830, bbox_mAP_m: 0.6640, bbox_mAP_l: 0.4210, bbox_mAP_copypaste: 0.297 0.603 0.579 0.483 0.664 0.421
+Loading and preparing results...
+DONE (t=111.76s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3234.66s).
+Accumulating evaluation results...
+DONE (t=75.69s).
+2023-01-15 13:21:11,720 - mmdet - INFO - Epoch(val) [11][452]	loss_center_heatmap: 0.3682, loss_wh: 0.0696, loss_offset: 0.1437, loss: 0.5815
+2023-01-15 13:24:21,388 - mmdet - INFO - Epoch [12][300/1372]	lr: 2.500e-03, eta: 1 day, 4:12:17, time: 0.632, data_time: 0.250, memory: 2330, loss_center_heatmap: 0.3686, loss_wh: 0.0752, loss_offset: 0.1400, loss: 0.5837, grad_norm: 3.7761
+2023-01-15 13:27:11,415 - mmdet - INFO - Epoch [12][600/1372]	lr: 2.500e-03, eta: 1 day, 3:40:08, time: 0.567, data_time: 0.189, memory: 2330, loss_center_heatmap: 0.3387, loss_wh: 0.0669, loss_offset: 0.1381, loss: 0.5438, grad_norm: 3.7502
+2023-01-15 13:30:14,597 - mmdet - INFO - Epoch [12][900/1372]	lr: 2.500e-03, eta: 1 day, 3:09:48, time: 0.611, data_time: 0.232, memory: 2330, loss_center_heatmap: 0.3736, loss_wh: 0.0813, loss_offset: 0.1391, loss: 0.5940, grad_norm: 4.0325
+2023-01-15 13:33:12,160 - mmdet - INFO - Epoch [12][1200/1372]	lr: 2.500e-03, eta: 1 day, 2:40:10, time: 0.592, data_time: 0.244, memory: 2330, loss_center_heatmap: 0.3720, loss_wh: 0.0814, loss_offset: 0.1409, loss: 0.5944, grad_norm: 3.9303
+2023-01-15 13:34:43,560 - mmdet - INFO - Saving checkpoint at 12 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.6 task/s, elapsed: 376s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.6 task/s, elapsed: 376s, ETA:     0sLoading and preparing results...
+DONE (t=73.82s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3197.72s).
+Accumulating evaluation results...
+DONE (t=75.22s).
+2023-01-15 14:41:52,658 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.294
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.588
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.672
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.419
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.632
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.783
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.573
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.879
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.729
+2023-01-15 14:42:07,769 - mmdet - INFO - Epoch(val) [12][3611]	bbox_mAP: 0.2940, bbox_mAP_50: 0.5880, bbox_mAP_75: 0.5680, bbox_mAP_s: 0.5020, bbox_mAP_m: 0.6720, bbox_mAP_l: 0.4190, bbox_mAP_copypaste: 0.294 0.588 0.568 0.502 0.672 0.419
+Loading and preparing results...
+DONE (t=99.02s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3185.71s).
+Accumulating evaluation results...
+DONE (t=79.54s).
+2023-01-15 15:49:02,432 - mmdet - INFO - Epoch(val) [12][452]	loss_center_heatmap: 0.3796, loss_wh: 0.0735, loss_offset: 0.1521, loss: 0.6052
+2023-01-15 15:52:11,507 - mmdet - INFO - Epoch [13][300/1372]	lr: 2.500e-03, eta: 1 day, 1:50:49, time: 0.630, data_time: 0.213, memory: 2330, loss_center_heatmap: 0.3725, loss_wh: 0.0797, loss_offset: 0.1446, loss: 0.5969, grad_norm: 3.9945
+2023-01-15 15:55:24,348 - mmdet - INFO - Epoch [13][600/1372]	lr: 2.500e-03, eta: 1 day, 1:24:27, time: 0.643, data_time: 0.239, memory: 2330, loss_center_heatmap: 0.3639, loss_wh: 0.0706, loss_offset: 0.1400, loss: 0.5745, grad_norm: 3.9423
+2023-01-15 15:58:22,687 - mmdet - INFO - Epoch [13][900/1372]	lr: 2.500e-03, eta: 1 day, 0:58:09, time: 0.594, data_time: 0.188, memory: 2330, loss_center_heatmap: 0.3529, loss_wh: 0.0773, loss_offset: 0.1411, loss: 0.5713, grad_norm: 3.9259
+2023-01-15 16:01:07,321 - mmdet - INFO - Epoch [13][1200/1372]	lr: 2.500e-03, eta: 1 day, 0:32:00, time: 0.549, data_time: 0.187, memory: 2330, loss_center_heatmap: 0.3662, loss_wh: 0.0698, loss_offset: 0.1407, loss: 0.5768, grad_norm: 4.1610
+2023-01-15 16:02:39,233 - mmdet - INFO - Saving checkpoint at 13 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.6 task/s, elapsed: 376s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.6 task/s, elapsed: 376s, ETA:     0sLoading and preparing results...
+DONE (t=101.89s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3203.96s).
+Accumulating evaluation results...
+DONE (t=81.62s).
+2023-01-15 17:10:22,394 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.299
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.606
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.588
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.519
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.684
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.423
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.414
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.633
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.787
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.589
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.879
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.735
+2023-01-15 17:10:36,725 - mmdet - INFO - Epoch(val) [13][3611]	bbox_mAP: 0.2990, bbox_mAP_50: 0.6060, bbox_mAP_75: 0.5880, bbox_mAP_s: 0.5190, bbox_mAP_m: 0.6840, bbox_mAP_l: 0.4230, bbox_mAP_copypaste: 0.299 0.606 0.588 0.519 0.684 0.423
+Loading and preparing results...
+DONE (t=67.51s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3218.90s).
+Accumulating evaluation results...
+DONE (t=82.38s).
+2023-01-15 18:16:59,819 - mmdet - INFO - Epoch(val) [13][452]	loss_center_heatmap: 0.3711, loss_wh: 0.0737, loss_offset: 0.1368, loss: 0.5815
+2023-01-15 18:20:14,094 - mmdet - INFO - Epoch [14][300/1372]	lr: 2.500e-03, eta: 23:49:25, time: 0.648, data_time: 0.275, memory: 2330, loss_center_heatmap: 0.3749, loss_wh: 0.0768, loss_offset: 0.1424, loss: 0.5942, grad_norm: 3.8751
+2023-01-15 18:23:11,096 - mmdet - INFO - Epoch [14][600/1372]	lr: 2.500e-03, eta: 23:25:49, time: 0.590, data_time: 0.209, memory: 2330, loss_center_heatmap: 0.3633, loss_wh: 0.0721, loss_offset: 0.1404, loss: 0.5758, grad_norm: 3.9525
+2023-01-15 18:26:13,988 - mmdet - INFO - Epoch [14][900/1372]	lr: 2.500e-03, eta: 23:03:09, time: 0.610, data_time: 0.207, memory: 2330, loss_center_heatmap: 0.3669, loss_wh: 0.0710, loss_offset: 0.1404, loss: 0.5783, grad_norm: 3.7820
+2023-01-15 18:28:59,677 - mmdet - INFO - Epoch [14][1200/1372]	lr: 2.500e-03, eta: 22:40:21, time: 0.552, data_time: 0.205, memory: 2330, loss_center_heatmap: 0.3607, loss_wh: 0.0718, loss_offset: 0.1399, loss: 0.5723, grad_norm: 4.0588
+2023-01-15 18:30:38,013 - mmdet - INFO - Saving checkpoint at 14 epochs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.4 task/s, elapsed: 384s, ETA:     0s
+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 3611/3611, 9.4 task/s, elapsed: 384s, ETA:     0sLoading and preparing results...
+DONE (t=115.35s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3614.72s).
+Accumulating evaluation results...
+DONE (t=114.77s).
+2023-01-15 19:46:38,481 - mmdet - INFO -
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.276
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.536
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.662
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.629
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.785
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.881
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.735
+2023-01-15 19:46:56,991 - mmdet - INFO - Epoch(val) [14][3611]	bbox_mAP: 0.2760, bbox_mAP_50: 0.5540, bbox_mAP_75: 0.5360, bbox_mAP_s: 0.4990, bbox_mAP_m: 0.6620, bbox_mAP_l: 0.4060, bbox_mAP_copypaste: 0.276 0.554 0.536 0.499 0.662 0.406
+Loading and preparing results...
+DONE (t=92.72s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=6200.18s).
+Accumulating evaluation results...
+DONE (t=108.39s).
+Traceback (most recent call last):
+  File "train.py", line 30, in <module>
+    train_detector(model, datasets, cfg, distributed=False, validate=True)
+  File "/home/aiarhipov/mmdetection/mmdet/apis/train.py", line 244, in train_detector
+    runner.run(data_loaders, cfg.workflow)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/epoch_based_runner.py", line 136, in run
+    epoch_runner(data_loaders[i], **kwargs)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/epoch_based_runner.py", line 72, in val
+    self.run_iter(data_batch, train_mode=False)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/epoch_based_runner.py", line 34, in run_iter
+    outputs = self.model.val_step(data_batch, self.optimizer, **kwargs)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/parallel/data_parallel.py", line 99, in val_step
+    return self.module.val_step(*inputs[0], **kwargs[0])
+  File "/home/aiarhipov/mmdetection/mmdet/models/detectors/base.py", line 263, in val_step
+    losses = self(**data)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/fp16_utils.py", line 116, in new_func
+    return old_func(*args, **kwargs)
+  File "/home/aiarhipov/mmdetection/mmdet/models/detectors/base.py", line 172, in forward
+    return self.forward_train(img, img_metas, **kwargs)
+  File "/home/aiarhipov/mmdetection/mmdet/models/detectors/single_stage.py", line 83, in forward_train
+    losses = self.bbox_head.forward_train(x, img_metas, gt_bboxes,
+  File "/home/aiarhipov/mmdetection/mmdet/models/dense_heads/base_dense_head.py", line 335, in forward_train
+    losses = self.loss(*loss_inputs, gt_bboxes_ignore=gt_bboxes_ignore)
+  File "/home/aiarhipov/miniconda3/envs/mmdet_edit/lib/python3.8/site-packages/mmcv/runner/fp16_utils.py", line 205, in new_func
+    return old_func(*args, **kwargs)
+  File "/home/aiarhipov/mmdetection/mmdet/models/dense_heads/centernet_head.py", line 153, in loss
+    target_result, avg_factor = self.get_targets(gt_bboxes, gt_labels,
+  File "/home/aiarhipov/mmdetection/mmdet/models/dense_heads/centernet_head.py", line 232, in get_targets
+    gen_gaussian_target(center_heatmap_target[batch_id, ind],
+  File "/home/aiarhipov/mmdetection/mmdet/models/utils/gaussian_target.py", line 46, in gen_gaussian_target
+    gaussian_kernel = gaussian2D(
+  File "/home/aiarhipov/mmdetection/mmdet/models/utils/gaussian_target.py", line 28, in gaussian2D
+    h[h < torch.finfo(h.dtype).eps * h.max()] = 0
+KeyboardInterrupt
