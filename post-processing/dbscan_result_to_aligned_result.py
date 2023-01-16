@@ -14,7 +14,7 @@ def dbscan_result_to_aligned_result(result, threshold=0.5):
         updated_confident_boxes = pd.DataFrame(
             confident_boxes, columns=["x1", "y1", "x2", "y2", "confidance"]
         )
-        print(updated_confident_boxes)
+
         X = confident_boxes[:, [0, 2]].flatten(order="F")
         Y = confident_boxes[:, [1, 3]].flatten(order="F")
 
@@ -46,10 +46,10 @@ def dbscan_result_to_aligned_result(result, threshold=0.5):
             count_confident_boxes:
         ]
 
-        updated_confident_boxes["x1_upd"] = 1
-        updated_confident_boxes["y1_upd"] = 1
-        updated_confident_boxes["x2_upd"] = 5
-        updated_confident_boxes["y2_upd"] = 5
+        updated_confident_boxes["x1_upd"] = 0
+        updated_confident_boxes["y1_upd"] = 0
+        updated_confident_boxes["x2_upd"] = 0
+        updated_confident_boxes["y2_upd"] = 0
 
         # img = Image.open(img_path)
         # draw = ImageDraw.Draw(img)

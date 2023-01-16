@@ -302,3 +302,4 @@
 {"mode": "val", "epoch": 149, "iter": 452, "lr": 1e-05, "memory": 3699, "data_time": 0.35774, "loss_center_heatmap": 0.28613, "loss_wh": 0.05489, "loss_offset": 0.11833, "loss": 0.45935, "time": 0.60116}
 {"mode": "train", "epoch": 150, "iter": 1000, "lr": 1e-05, "memory": 3699, "data_time": 0.15454, "loss_center_heatmap": 0.27441, "loss_wh": 0.04971, "loss_offset": 0.11529, "loss": 0.43941, "grad_norm": 4.3085, "time": 0.5536}
 {"mode": "val", "epoch": 150, "iter": 3611, "lr": 1e-05, "bbox_mAP": 0.323, "bbox_mAP_50": 0.647, "bbox_mAP_75": 0.631, "bbox_mAP_s": 0.589, "bbox_mAP_m": 0.752, "bbox_mAP_l": 0.455, "bbox_mAP_copypaste": "0.323 0.647 0.631 0.589 0.752 0.455"}
+{"mode": "val", "epoch": 150, "iter": 452, "lr": 1e-05, "memory": 3699, "data_time": 0.5712, "loss_center_heatmap": 0.29777, "loss_wh": 0.05232, "loss_offset": 0.1186, "loss": 0.4687, "time": 0.94049}
