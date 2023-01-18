@@ -1,3 +1,4 @@
 /home/aiarhipov/centernet/exps/19_eval/epoch60_resnet34_batch2.pth
 *.pth
+*.pkl
 
