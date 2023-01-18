@@ -1,0 +1,11 @@
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.745
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.745
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.431
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.656
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.811
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.641
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.899
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.744
+OrderedDict([('bbox_mAP', 0.313), ('bbox_mAP_50', 0.634), ('bbox_mAP_75', 0.616), ('bbox_mAP_s', 0.573),('bbox_mAP_m', 0.745), ('bbox_mAP_l', 0.439), ('bbox_mAP_copypaste', '0.313 0.634 0.616 0.573 0.745 0.439')])
