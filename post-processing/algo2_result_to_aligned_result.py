@@ -15,7 +15,8 @@ def algo2_result_to_aligned_result(
     for boxes in result:
         confident_boxes = boxes[boxes[:, 4] > threshold]
 
-        upd_confident_boxes = confident_boxes
+        refined_boxes = set()
+        # confident_boxes = confident_boxes.copy()
         for i, cell in enumerate(confident_boxes):
             w_cell = cell[2] - cell[0]
             h_cell = cell[3] - cell[1]
@@ -68,53 +69,71 @@ def algo2_result_to_aligned_result(
                                 idx_i_j.append(j)
                                 vertex_idx.append(v_j)
 
-                            if (
-                                i == 54
-                                and v_i == 0
-                                and j == 62
-                                and v_j == 1
-                                or j == 54
-                                and v_j == 0
-                                and i == 62
-                                and v_i == 1
-                            ):
-                                print(
-                                    f"i = {i}, j = {j}, v_i = {v_i}, v_j = {v_j}"
-                                )
-
-                                print("xdist < x_offset1   ", xdist, x_offset1)
-                                print("xdist < x_offset2   ", xdist, x_offset2)
-                                print("ydist < y_offset1   ", ydist, y_offset1)
-                                print("ydist < y_offset2   ", ydist, y_offset2)
-                                print("dist  < dist_thresh ", dist, dist_thresh)
-
+                            # if (
+                            #     i == 62
+                            #     and v_i == 0
+                            #     and j == 60
+                            #     and v_j == 1
+                            #     or j == 62
+                            #     and v_j == 0
+                            #     and i == 60
+                            #     and v_i == 1
+                            # ):
+                            #     print(
+                            #         f"i = {i}, j = {j}, v_i = {v_i}, v_j = {v_j}"
+                            #     )
+                            # print("h_cell = ", h_cell)
+                            # print("w_cell = ", w_cell)
+                            # print("cell[2] - cell[0] ", cell[2] - cell[0])
+                            # print("cell[3] - cell[1] ", cell[3] - cell[1])
+                            # print("xdist < x_offset1   ", xdist, x_offset1)
+                            # print("xdist < x_offset2   ", xdist, x_offset2)
+                            # print("ydist < y_offset1   ", ydist, y_offset1)
+                            # print("ydist < y_offset2   ", ydist, y_offset2)
+                            # print("dist  < dist_thresh ", dist, dist_thresh)
+                # if keep_x:
                 keep_x.append(x_i)
                 keep_y.append(y_i)
                 idx_i_j.append(i)
                 vertex_idx.append(v_i)
 
-            # print("keep_x = ", keep_x)
-            # print("keep_y = ", keep_y)
-            # print("idx_i_j = ", idx_i_j)
-            # print("vertex_idx = ", vertex_idx)
-            # print("#" * 100)
-            mean_x = np.mean(keep_x)
-            mean_y = np.mean(keep_y)
-            for idx, v_idx in zip(idx_i_j, vertex_idx):
-                if v_idx == 0:
-                    upd_confident_boxes[idx, 0] = mean_x
-                    upd_confident_boxes[idx, 1] = mean_y
-                elif v_idx == 1:
-                    upd_confident_boxes[idx, 2] = mean_x
-                    upd_confident_boxes[idx, 1] = mean_y
-                elif v_idx == 2:
-                    upd_confident_boxes[idx, 2] = mean_x
-                    upd_confident_boxes[idx, 3] = mean_y
-                elif v_idx == 3:
-                    upd_confident_boxes[idx, 0] = mean_x
-                    upd_confident_boxes[idx, 3] = mean_y
-                else:
-                    print(f"strange vertex idx{idx}")
+                mean_x = int(np.mean(keep_x))
+                mean_y = int(np.mean(keep_y))
 
-        aligned_result.append(upd_confident_boxes)
+                print(f"keep_x = {keep_x},  mean = {mean_x} ")
+                print(f"keep_y = {keep_y},  mean = {mean_y} ")
+                print("idx_i_j = ", idx_i_j)
+                print("vertex_idx = ", vertex_idx)
+                print("#" * 100)
+                print(confident_boxes.shape)
+
+                # if 60 in idx_i_j or 62 in idx_i_j:
+                #     print("keep_x = ", keep_x)
+                #     print("keep_y = ", keep_y)
+                #     print("idx_i_j = ", idx_i_j)
+                #     print("vertex_idx = ", vertex_idx)
+                #     print("#" * 100)
+
+                for idx, v_idx in zip(idx_i_j, vertex_idx):
+
+                    refined_boxes.add(int(str(v_idx) + str(idx)))
+                    if v_idx == 0:
+                        confident_boxes[idx, 0] = mean_x
+                        confident_boxes[idx, 1] = mean_y
+                    elif v_idx == 1:
+                        confident_boxes[idx, 2] = mean_x
+                        confident_boxes[idx, 1] = mean_y
+                    elif v_idx == 2:
+                        confident_boxes[idx, 2] = mean_x
+                        confident_boxes[idx, 3] = mean_y
+                    elif v_idx == 3:
+                        confident_boxes[idx, 0] = mean_x
+                        confident_boxes[idx, 3] = mean_y
+                    else:
+                        print(f"strange vertex idx{idx}")
+
+        aligned_result.append(confident_boxes)
+
+        print("refined_boxes = ", refined_boxes)
+        print("len refined_boxes = ", len(refined_boxes))
     return aligned_result
