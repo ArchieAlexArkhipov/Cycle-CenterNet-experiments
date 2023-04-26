@@ -4,9 +4,7 @@ TEST_NAME = "16_paper_params_dla34_batch8"
 dataset_type = "CocoDataset"
 data_root = "/home/aiarhipov/datasets/WTW-dataset/"
 
-img_norm_cfg = dict(
-    mean=[103.53, 116.28, 123.675], std=[1.0, 1.0, 1.0], to_rgb=False
-)
+img_norm_cfg = dict(mean=[103.53, 116.28, 123.675], std=[1.0, 1.0, 1.0], to_rgb=False)
 
 data = dict(
     samples_per_gpu=8,
@@ -231,7 +229,7 @@ model = dict(
 
 
 # GPU
-gpu_ids = [5]
+gpu_ids = [6]
 device = "cuda"
 
 
@@ -244,9 +242,7 @@ optimizer_config = dict(grad_clip=dict(max_norm=35, norm_type=2))
 
 
 # LEARNING POLICY
-runner = dict(
-    type="EpochBasedRunner", max_epochs=150
-)  # the real epoch is 28*5=140
+runner = dict(type="EpochBasedRunner", max_epochs=150)  # the real epoch is 28*5=140
 
 # Based on the default settings of modern detectors, we added warmup settings.
 lr_config = dict(

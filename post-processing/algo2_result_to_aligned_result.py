@@ -38,12 +38,8 @@ def algo2_result_to_aligned_result(
 
                 for j, another_cell in enumerate(confident_boxes):
                     if i != j:
-                        x_offset2 = max(
-                            (another_cell[2] - another_cell[0]) * r, 4.0
-                        )
-                        y_offset2 = max(
-                            (another_cell[3] - another_cell[1]) * r, 4.0
-                        )
+                        x_offset2 = max((another_cell[2] - another_cell[0]) * r, 4.0)
+                        y_offset2 = max((another_cell[3] - another_cell[1]) * r, 4.0)
 
                         for v_j, (x_j, y_j) in enumerate(
                             (
@@ -100,12 +96,12 @@ def algo2_result_to_aligned_result(
                 mean_x = int(np.mean(keep_x))
                 mean_y = int(np.mean(keep_y))
 
-                print(f"keep_x = {keep_x},  mean = {mean_x} ")
-                print(f"keep_y = {keep_y},  mean = {mean_y} ")
-                print("idx_i_j = ", idx_i_j)
-                print("vertex_idx = ", vertex_idx)
-                print("#" * 100)
-                print(confident_boxes.shape)
+                # print(f"keep_x = {keep_x},  mean = {mean_x} ")
+                # print(f"keep_y = {keep_y},  mean = {mean_y} ")
+                # print("idx_i_j = ", idx_i_j)
+                # print("vertex_idx = ", vertex_idx)
+                # print("#" * 100)
+                # print(confident_boxes.shape)
 
                 # if 60 in idx_i_j or 62 in idx_i_j:
                 #     print("keep_x = ", keep_x)
@@ -115,7 +111,6 @@ def algo2_result_to_aligned_result(
                 #     print("#" * 100)
 
                 for idx, v_idx in zip(idx_i_j, vertex_idx):
-
                     refined_boxes.add(int(str(v_idx) + str(idx)))
                     if v_idx == 0:
                         confident_boxes[idx, 0] = mean_x
@@ -130,10 +125,11 @@ def algo2_result_to_aligned_result(
                         confident_boxes[idx, 0] = mean_x
                         confident_boxes[idx, 3] = mean_y
                     else:
-                        print(f"strange vertex idx{idx}")
+                        pass
+                        # print(f"strange vertex idx{idx}")
 
         aligned_result.append(confident_boxes)
 
-        print("refined_boxes = ", refined_boxes)
-        print("len refined_boxes = ", len(refined_boxes))
+        # print("refined_boxes = ", refined_boxes)
+        # print("len refined_boxes = ", len(refined_boxes))
     return aligned_result

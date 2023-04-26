@@ -14,7 +14,6 @@ def xml_to_np(xml_path):
         )
     gt_boxes = []
     for elem in root.findall("object/bndbox"):
-        print(elem.text)
         startrow = int(elem.find("startrow").text)
         endrow = int(elem.find("endrow").text)
         startcol = int(elem.find("startcol").text)
