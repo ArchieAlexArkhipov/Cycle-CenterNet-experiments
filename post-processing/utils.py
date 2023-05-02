@@ -11,15 +11,15 @@ def print_LC(img_path, pred, out_path="../images/example_with_bounding_boxes.jpg
 
         start_point = (int(x0), int(y0))
         end_point = (int(x1), int(y1))
-        cv2.rectangle(img, start_point, end_point, color=(100, 50, 200), thickness=2)
+        cv2.rectangle(img, start_point, end_point, color=(255, 50, 255), thickness=2)
 
         cv2.putText(
             img,
             "|".join(map(str, map(int, box[5:]))),
-            (int(x0) + 10, int(y0) + 10),
+            (int(x0) + 15, int(y0) + 15),
             fontFace=cv2.FONT_HERSHEY_SIMPLEX,
             fontScale=0.4,
-            color=(100, 50, 200),
+            color=(255, 50, 255),
             thickness=1,
         )
 
