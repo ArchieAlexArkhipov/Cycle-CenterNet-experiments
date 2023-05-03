@@ -1,8 +1,10 @@
 import cv2
+import numpy as np
 
 
 def print_LC(img_path, pred, out_path="../images/example_with_bounding_boxes.jpg"):
     img = cv2.imread(img_path)
+    pred[np.isnan(pred)] = 0
     for box in pred:
         x0 = box[0]
         x1 = box[2]
@@ -15,7 +17,7 @@ def print_LC(img_path, pred, out_path="../images/example_with_bounding_boxes.jpg
 
         cv2.putText(
             img,
-            "|".join(map(str, map(int, box[5:]))),
+            "|".join(map(str, map(int, box[4:]))),
             (int(x0) + 15, int(y0) + 15),
             fontFace=cv2.FONT_HERSHEY_SIMPLEX,
             fontScale=0.4,
