@@ -1,10 +1,12 @@
-TEST_NAME = "20_cycle_l1_avg_factor_8"
+TEST_NAME = "20_cycle_l1_avg_factor_8_2heatmaps"
 
 # DATA AND AUG
 dataset_type = "CocoDataset"
 data_root = "/home/aiarhipov/datasets/WTW-dataset/"
 
-img_norm_cfg = dict(mean=[103.53, 116.28, 123.675], std=[1.0, 1.0, 1.0], to_rgb=False)
+img_norm_cfg = dict(
+    mean=[103.53, 116.28, 123.675], std=[1.0, 1.0, 1.0], to_rgb=False
+)
 
 data = dict(
     samples_per_gpu=8,
@@ -220,7 +222,7 @@ model = dict(
         in_channel=64,
         feat_channel=64,
         loss_center_heatmap=dict(type="GaussianFocalLoss", loss_weight=1.0),
-        loss_wh=dict(type="L1Loss", loss_weight=0.1),
+        # loss_wh=dict(type="L1Loss", loss_weight=0.1),
         loss_offset=dict(type="L1Loss", loss_weight=1.0),
         loss_c2v=dict(type="L1Loss", loss_weight=1.0),
         loss_v2c=dict(type="L1Loss", loss_weight=0.5),
@@ -231,7 +233,7 @@ model = dict(
 
 
 # GPU
-gpu_ids = [6]
+gpu_ids = [4]
 device = "cuda"
 
 
@@ -244,7 +246,9 @@ optimizer_config = dict(grad_clip=dict(max_norm=35, norm_type=2))
 
 
 # LEARNING POLICY
-runner = dict(type="EpochBasedRunner", max_epochs=150)  # the real epoch is 28*5=140
+runner = dict(
+    type="EpochBasedRunner", max_epochs=150
+)  # the real epoch is 28*5=140
 
 # Based on the default settings of modern detectors, we added warmup settings.
 lr_config = dict(
@@ -265,7 +269,7 @@ auto_scale_lr = dict(enable=False, base_batch_size=16)
 work_dir = f"/home/aiarhipov/centernet/exps/{TEST_NAME}"
 
 log_config = dict(
-    interval=1000,
+    interval=500,
     hooks=[
         dict(type="TextLoggerHook"),
         dict(type="TensorboardLoggerHook"),
@@ -276,7 +280,7 @@ log_config = dict(
                 "entity": "centernet",
                 "name": TEST_NAME,
             },
-            interval=1000,
+            interval=500,
             log_checkpoint=True,
             log_checkpoint_metadata=True,
             num_eval_images=15,
@@ -287,8 +291,8 @@ log_level = "INFO"
 
 
 # EVALUATION
-evaluation = dict(interval=30, metric="bbox")
-checkpoint_config = dict(interval=30)
+evaluation = dict(interval=1, metric="bbox")
+checkpoint_config = dict(interval=1)
 
 
 # RUNTIME
