@@ -1,4 +1,4 @@
-TEST_NAME = "20_cycle_l1_avg_factor_8_2heatmaps"
+TEST_NAME = "20_cycle_l1_avg_factor_8_2heatmaps_short_dir"
 
 # DATA AND AUG
 dataset_type = "CocoDataset"
@@ -233,7 +233,7 @@ model = dict(
 
 
 # GPU
-gpu_ids = [4]
+gpu_ids = [6]
 device = "cuda"
 
 
@@ -279,6 +279,7 @@ log_config = dict(
                 "project": "CenterNet",
                 "entity": "centernet",
                 "name": TEST_NAME,
+                "dir": "/home/aiarhipov/centernet/exps/wandb",
             },
             interval=500,
             log_checkpoint=True,
@@ -291,8 +292,8 @@ log_level = "INFO"
 
 
 # EVALUATION
-evaluation = dict(interval=1, metric="bbox")
-checkpoint_config = dict(interval=1)
+evaluation = dict(interval=30, metric="bbox")
+checkpoint_config = dict(interval=30)
 
 
 # RUNTIME
