@@ -9,6 +9,20 @@ from mmdet.apis import set_random_seed, train_detector
 # Let's take a look at the dataset image
 from mmdet.datasets import build_dataset
 from mmdet.models import build_detector
+import subprocess
+import random
+
+
+def get_free_gpu():
+    log = str(
+        subprocess.check_output("nvidia-smi --format=csv --query-gpu=utilization.gpu,memory.used", shell=True)
+    ).split(r"\n")[1:-1]
+    free_gpu = []
+    for idx, gpu_info in enumerate(log):
+        if gpu_info[:-4].split(" %, ")[0] == "0" and gpu_info[:-4].split(" %, ")[1] == "3":
+            free_gpu.append(idx)
+    return random.choice(free_gpu)
+
 
 wandb.login()
 
@@ -16,9 +30,13 @@ cfg = Config.fromfile(f"/home/aiarhipov/centernet/exps/{argv[1]}config.py")
 
 
 set_random_seed(0, deterministic=False)
-
+cfg.gpu_ids = [get_free_gpu()]
 # Build dataset
-datasets = [build_dataset(cfg.data.train), build_dataset(cfg.data.val_loss)]
+if len(argv) == 2:
+    datasets = [build_dataset(cfg.data.train), build_dataset(cfg.data.val_loss)]
+elif argv[2] == "no-val":
+    datasets = [build_dataset(cfg.data.train)]
+    cfg.workflow = [("train", 1)]
 
 # Build the detector
 model = build_detector(cfg.model)
