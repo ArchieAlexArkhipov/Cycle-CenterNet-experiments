@@ -1,3 +1,4 @@
+import os
 import os.path as osp
 from sys import argv
 
@@ -26,19 +27,23 @@ def get_free_gpu():
     raise RuntimeError("All gpus are used")
 
 
+os.environ["WANDB_CACHE_DIR"] = "/home/aiarhipov/.cache/wandb"
+os.environ["WANDB_CONFIG_DIR"] = "/home/aiarhipov/.config/wandb"
+os.environ["WANDB_DIR"] = "/home/aiarhipov/centernet/exps/wandb"
 wandb.login()
-
 cfg = Config.fromfile(f"/home/aiarhipov/centernet/exps/{argv[1]}config.py")
 
 
 set_random_seed(0, deterministic=False)
 cfg.gpu_ids = [get_free_gpu()]
+val = True
 # Build dataset
 if len(argv) == 2:
     datasets = [build_dataset(cfg.data.train), build_dataset(cfg.data.val_loss)]
 elif argv[2] == "no-val":
     datasets = [build_dataset(cfg.data.train)]
     cfg.workflow = [("train", 1)]
+    val = False
 
 # Build the detector
 model = build_detector(cfg.model)
@@ -47,4 +52,4 @@ model.CLASSES = datasets[0].CLASSES
 
 # Create work_dir
 mmcv.mkdir_or_exist(osp.abspath(cfg.work_dir))
-train_detector(model, datasets, cfg, distributed=False, validate=True)
+train_detector(model, datasets, cfg, distributed=False, validate=val)

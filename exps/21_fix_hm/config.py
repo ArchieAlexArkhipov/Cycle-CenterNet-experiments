@@ -1,6 +1,5 @@
-# TEST_NAME = "20_cycle_middle_pairing_loss_speedup_no_val"
-TEST_NAME = "gpu test"
-
+TEST_NAME = "21_fix_hm_no_validat"
+TAGS = ["no-val", "no_validate", "1hm"]
 # DATA AND AUG
 dataset_type = "CocoDataset"
 data_root = "/home/aiarhipov/datasets/WTW-dataset/"
@@ -277,6 +276,7 @@ log_config = dict(
                 "entity": "centernet",
                 "name": TEST_NAME,
                 "dir": "/home/aiarhipov/centernet/exps/wandb",
+                "tags": TAGS,
             },
             interval=343,
             log_checkpoint=True,
@@ -289,8 +289,8 @@ log_level = "INFO"
 
 
 # EVALUATION
-evaluation = dict(interval=15, metric="bbox")
-checkpoint_config = dict(interval=15)
+evaluation = dict(interval=5, metric="bbox")
+checkpoint_config = dict(interval=5)
 
 
 # RUNTIME
