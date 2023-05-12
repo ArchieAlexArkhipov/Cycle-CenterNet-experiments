@@ -21,7 +21,9 @@ def get_free_gpu():
     for idx, gpu_info in enumerate(log):
         if gpu_info[:-4].split(" %, ")[0] == "0" and gpu_info[:-4].split(" %, ")[1] == "3":
             free_gpu.append(idx)
-    return random.choice(free_gpu)
+    if free_gpu:
+        return random.choice(free_gpu)
+    raise RuntimeError("All gpus are used")
 
 
 wandb.login()
