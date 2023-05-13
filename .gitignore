@@ -308,3 +308,6 @@ artifacts/val:v2/media/images/mask/cc53b4f86a62c3a337fd.mask.png
 artifacts/val:v2/media/images/mask/eafa11437a12e286e073.mask.png
 artifacts/val:v2/media/images/mask/ed3140f4083d6f693086.mask.png
 artifacts/val:v2/media/images/mask/fcd04f52d80f3610cd6b.mask.png
+exps/wandb/debug-internal.log
+exps/wandb/debug.log
+exps/wandb/latest-run

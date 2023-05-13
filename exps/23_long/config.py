@@ -1,18 +1,20 @@
-TEST_NAME = "21_check_no_val_nms"
-EVAL_LAG = 1
-CHECKPOINT_LAG = 1
+TEST_NAME = "23_long"
+EVAL_LAG = 30
+CHECKPOINT_LAG = 30
 EPOCHS = 150
 LR = 0.00125
 BACKBONE = "DLANetMMDet3D"
+BATCH = 8
+local_maximum_kernel = 1
 TAGS = [
-    "nms",
-    "no_validate",
+    f"local_maximum_kernel={local_maximum_kernel}",
     "1hm",
     f"{EPOCHS}_epoch",
     f"{LR}_lr",
     f"{EVAL_LAG}_eval_lag",
     f"{CHECKPOINT_LAG}_chkpt_lag",
     f"{BACKBONE}_backbone",
+    f"{BATCH}_batch",
 ]
 # DATA AND AUG
 dataset_type = "CocoDataset"
@@ -21,7 +23,7 @@ data_root = "/home/aiarhipov/datasets/WTW-dataset/"
 img_norm_cfg = dict(mean=[103.53, 116.28, 123.675], std=[1.0, 1.0, 1.0], to_rgb=False)
 
 data = dict(
-    samples_per_gpu=8,
+    samples_per_gpu=BATCH,
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
@@ -239,7 +241,11 @@ model = dict(
         loss_v2c=dict(type="L1Loss", loss_weight=0.5),
     ),
     train_cfg=None,
-    test_cfg=dict(topk=3000, local_maximum_kernel=1, max_per_img=3000, nms=dict(type="nms", iou_threshold=0.7)),
+    test_cfg=dict(
+        topk=3000,
+        local_maximum_kernel=local_maximum_kernel,
+        max_per_img=3000,
+    ),
 )
 
 
@@ -276,9 +282,9 @@ auto_scale_lr = dict(enable=False, base_batch_size=16)
 
 # LOGGING
 work_dir = f"/home/aiarhipov/centernet/exps/{TEST_NAME}"
-
+INTERVAL = int(10976 / (4 * BATCH)) + (10976 % (4 * BATCH) > 0)
 log_config = dict(
-    interval=343,
+    interval=INTERVAL,
     hooks=[
         dict(type="TextLoggerHook"),
         dict(type="TensorboardLoggerHook"),
@@ -291,10 +297,10 @@ log_config = dict(
                 "dir": "/home/aiarhipov/centernet/exps/wandb",
                 "tags": TAGS,
             },
-            interval=343,
+            interval=INTERVAL,
             log_checkpoint=True,
             log_checkpoint_metadata=True,
-            num_eval_images=15,
+            num_eval_images=5,
         ),
     ],
 )
