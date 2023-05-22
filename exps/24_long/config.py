@@ -1,4 +1,4 @@
-TEST_NAME = "23_long"
+TEST_NAME = "24_long"
 EVAL_LAG = 30
 CHECKPOINT_LAG = 5
 EPOCHS = 150
@@ -232,7 +232,6 @@ model = dict(
     ),
     bbox_head=dict(
         type="CycleCenterNetHead",
-        num_classes=1,
         in_channel=64,
         feat_channel=64,
         loss_center_heatmap=dict(type="GaussianFocalLoss", loss_weight=1.0),
@@ -299,7 +298,7 @@ log_config = dict(
             },
             interval=INTERVAL,
             log_checkpoint=True,
-            log_checkpoint_metadata=True,
+            log_checkpoint_metadata=False,
             num_eval_images=5,
         ),
     ],
@@ -309,7 +308,7 @@ log_level = "INFO"
 
 # EVALUATION
 evaluation = dict(interval=EVAL_LAG, metric="bbox")
-checkpoint_config = dict(interval=CHECKPOINT_LAG)
+checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=5)
 
 
 # RUNTIME

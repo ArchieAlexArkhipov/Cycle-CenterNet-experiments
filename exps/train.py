@@ -14,17 +14,20 @@ import subprocess
 import random
 
 
-def get_free_gpu():
-    log = str(
-        subprocess.check_output("nvidia-smi --format=csv --query-gpu=utilization.gpu,memory.used", shell=True)
-    ).split(r"\n")[1:-1]
-    free_gpu = []
-    for idx, gpu_info in enumerate(log):
-        if gpu_info[:-4].split(" %, ")[0] == "0" and gpu_info[:-4].split(" %, ")[1] == "3":
-            free_gpu.append(idx)
-    if free_gpu:
-        return random.choice(free_gpu)
-    raise RuntimeError("All gpus are used")
+def get_free_gpu(force_gpu=None):
+    if force_gpu:
+        return force_gpu
+    else:
+        log = str(
+            subprocess.check_output("nvidia-smi --format=csv --query-gpu=utilization.gpu,memory.used", shell=True)
+        ).split(r"\n")[1:-1]
+        free_gpu = []
+        for idx, gpu_info in enumerate(log):
+            if gpu_info[:-4].split(" %, ")[0] == "0" and gpu_info[:-4].split(" %, ")[1] == "3":
+                free_gpu.append(idx)
+        if free_gpu:
+            return random.choice(free_gpu)
+        raise RuntimeError("All gpus are used")
 
 
 os.environ["WANDB_CACHE_DIR"] = "/home/aiarhipov/.cache/wandb"

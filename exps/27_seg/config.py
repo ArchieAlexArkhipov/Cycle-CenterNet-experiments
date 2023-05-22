@@ -1,11 +1,13 @@
-TEST_NAME = "23_long"
-EVAL_LAG = 30
-CHECKPOINT_LAG = 5
-EPOCHS = 150
+TEST_NAME = "27_seg"
+EVAL_LAG = 5
+CHECKPOINT_LAG = 1
+EPOCHS = 15
 LR = 0.00125
 BACKBONE = "DLANetMMDet3D"
 BATCH = 8
 local_maximum_kernel = 1
+ITER_PERIOD = 4
+SCALE = 512
 TAGS = [
     f"local_maximum_kernel={local_maximum_kernel}",
     "1hm",
@@ -31,7 +33,7 @@ data = dict(
         img_prefix="train/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True, color_type="color"),
-            dict(type="LoadAnnotations", with_bbox=True),
+            dict(type="LoadAnnotations", with_bbox=True, with_mask=True, poly2mask=False),
             dict(
                 type="PhotoMetricDistortion",
                 brightness_delta=32,
@@ -39,16 +41,16 @@ data = dict(
                 saturation_range=(0.5, 1.5),
                 hue_delta=18,
             ),
-            dict(
-                type="RandomCenterCropPad",
-                crop_size=(512, 512),
-                ratios=(0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3),
-                mean=[0, 0, 0],
-                std=[1, 1, 1],
-                to_rgb=True,
-                test_pad_mode=None,
-            ),
-            dict(type="Resize", img_scale=(512, 512), keep_ratio=True),
+            # dict(
+            #     type="RandomCenterCropPad",
+            #     crop_size=(SCALE, SCALE),
+            #     ratios=(0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3),
+            #     mean=[0, 0, 0],
+            #     std=[1, 1, 1],
+            #     to_rgb=True,
+            #     test_pad_mode=None,
+            # ),
+            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=False),
             dict(type="RandomFlip", flip_ratio=0.5),
             dict(
                 type="Normalize",
@@ -57,7 +59,7 @@ data = dict(
                 to_rgb=False,
             ),
             dict(type="DefaultFormatBundle"),
-            dict(type="Collect", keys=["img", "gt_bboxes", "gt_labels"]),
+            dict(type="Collect", keys=["img", "gt_bboxes", "gt_labels", "gt_masks"]),
         ],
         data_root="/home/aiarhipov/datasets/WTW-dataset/",
         classes=("box",),
@@ -68,7 +70,7 @@ data = dict(
         img_prefix="test/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True, color_type="color"),
-            dict(type="LoadAnnotations", with_bbox=True),
+            dict(type="LoadAnnotations", with_bbox=True, with_mask=True, poly2mask=True),
             dict(
                 type="PhotoMetricDistortion",
                 brightness_delta=32,
@@ -76,16 +78,16 @@ data = dict(
                 saturation_range=(0.5, 1.5),
                 hue_delta=18,
             ),
-            dict(
-                type="RandomCenterCropPad",
-                crop_size=(512, 512),
-                ratios=(0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3),
-                mean=[0, 0, 0],
-                std=[1, 1, 1],
-                to_rgb=True,
-                test_pad_mode=None,
-            ),
-            dict(type="Resize", img_scale=(512, 512), keep_ratio=True),
+            # dict(
+            #     type="RandomCenterCropPad",
+            #     crop_size=(SCALE, SCALE),
+            #     ratios=(0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3),
+            #     mean=[0, 0, 0],
+            #     std=[1, 1, 1],
+            #     to_rgb=True,
+            #     test_pad_mode=None,
+            # ),
+            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=False),
             dict(type="RandomFlip", flip_ratio=0.5),
             dict(
                 type="Normalize",
@@ -94,7 +96,7 @@ data = dict(
                 to_rgb=False,
             ),
             dict(type="DefaultFormatBundle"),
-            dict(type="Collect", keys=["img", "gt_bboxes", "gt_labels"]),
+            dict(type="Collect", keys=["img", "gt_bboxes", "gt_labels", "gt_masks"]),
         ],
         data_root="/home/aiarhipov/datasets/WTW-dataset/",
         classes=("box",),
@@ -110,18 +112,18 @@ data = dict(
                 scale_factor=1.0,
                 flip=False,
                 transforms=[
-                    dict(type="Resize", keep_ratio=True),
-                    dict(
-                        type="RandomCenterCropPad",
-                        ratios=None,
-                        border=None,
-                        mean=[0, 0, 0],
-                        std=[1, 1, 1],
-                        to_rgb=True,
-                        test_mode=True,
-                        test_pad_mode=["logical_or", 31],
-                        test_pad_add_pix=1,
-                    ),
+                    dict(type="Resize", keep_ratio=False),
+                    # dict(
+                    #     type="RandomCenterCropPad",
+                    #     ratios=None,
+                    #     border=None,
+                    #     mean=[0, 0, 0],
+                    #     std=[1, 1, 1],
+                    #     to_rgb=True,
+                    #     test_mode=True,
+                    #     test_pad_mode=["logical_or", 31],
+                    #     test_pad_add_pix=1,
+                    # ),
                     dict(type="RandomFlip"),
                     dict(
                         type="Normalize",
@@ -163,18 +165,18 @@ data = dict(
                 scale_factor=1.0,
                 flip=False,
                 transforms=[
-                    dict(type="Resize", keep_ratio=True),
-                    dict(
-                        type="RandomCenterCropPad",
-                        ratios=None,
-                        border=None,
-                        mean=[0, 0, 0],
-                        std=[1, 1, 1],
-                        to_rgb=True,
-                        test_mode=True,
-                        test_pad_mode=["logical_or", 31],
-                        test_pad_add_pix=1,
-                    ),
+                    dict(type="Resize", keep_ratio=False),
+                    # dict(
+                    #     type="RandomCenterCropPad",
+                    #     ratios=None,
+                    #     border=None,
+                    #     mean=[0, 0, 0],
+                    #     std=[1, 1, 1],
+                    #     to_rgb=True,
+                    #     test_mode=True,
+                    #     test_pad_mode=["logical_or", 31],
+                    #     test_pad_add_pix=1,
+                    # ),
                     dict(type="RandomFlip"),
                     dict(
                         type="Normalize",
@@ -232,7 +234,6 @@ model = dict(
     ),
     bbox_head=dict(
         type="CycleCenterNetHead",
-        num_classes=1,
         in_channel=64,
         feat_channel=64,
         loss_center_heatmap=dict(type="GaussianFocalLoss", loss_weight=1.0),
@@ -282,7 +283,7 @@ auto_scale_lr = dict(enable=False, base_batch_size=16)
 
 # LOGGING
 work_dir = f"/home/aiarhipov/centernet/exps/{TEST_NAME}"
-INTERVAL = int(10976 / (4 * BATCH)) + (10976 % (4 * BATCH) > 0)
+INTERVAL = int(10976 / (ITER_PERIOD * BATCH)) + (10976 % (ITER_PERIOD * BATCH) > 0)
 log_config = dict(
     interval=INTERVAL,
     hooks=[
@@ -299,7 +300,7 @@ log_config = dict(
             },
             interval=INTERVAL,
             log_checkpoint=True,
-            log_checkpoint_metadata=True,
+            log_checkpoint_metadata=False,
             num_eval_images=5,
         ),
     ],
@@ -309,7 +310,7 @@ log_level = "INFO"
 
 # EVALUATION
 evaluation = dict(interval=EVAL_LAG, metric="bbox")
-checkpoint_config = dict(interval=CHECKPOINT_LAG)
+checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=5)
 
 
 # RUNTIME

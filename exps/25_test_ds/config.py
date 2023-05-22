@@ -1,10 +1,10 @@
-TEST_NAME = "23_long"
-EVAL_LAG = 30
-CHECKPOINT_LAG = 5
-EPOCHS = 150
+TEST_NAME = "25_test_ds"
+EVAL_LAG = 1
+CHECKPOINT_LAG = 1
+EPOCHS = 2
 LR = 0.00125
 BACKBONE = "DLANetMMDet3D"
-BATCH = 8
+BATCH = 1
 local_maximum_kernel = 1
 TAGS = [
     f"local_maximum_kernel={local_maximum_kernel}",
@@ -24,10 +24,10 @@ img_norm_cfg = dict(mean=[103.53, 116.28, 123.675], std=[1.0, 1.0, 1.0], to_rgb=
 
 data = dict(
     samples_per_gpu=BATCH,
-    workers_per_gpu=2,
+    workers_per_gpu=0,
     train=dict(
         type=dataset_type,
-        ann_file="/home/aiarhipov/datasets/WTW-dataset/train/train.json",
+        ann_file="/home/aiarhipov/datasets/WTW-dataset/train/train_4.json",
         img_prefix="train/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True, color_type="color"),
@@ -64,7 +64,7 @@ data = dict(
     ),
     val_loss=dict(
         type=dataset_type,
-        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test.json",
+        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test_4.json",
         img_prefix="test/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True, color_type="color"),
@@ -232,7 +232,6 @@ model = dict(
     ),
     bbox_head=dict(
         type="CycleCenterNetHead",
-        num_classes=1,
         in_channel=64,
         feat_channel=64,
         loss_center_heatmap=dict(type="GaussianFocalLoss", loss_weight=1.0),
@@ -299,7 +298,7 @@ log_config = dict(
             },
             interval=INTERVAL,
             log_checkpoint=True,
-            log_checkpoint_metadata=True,
+            log_checkpoint_metadata=False,
             num_eval_images=5,
         ),
     ],
@@ -309,7 +308,7 @@ log_level = "INFO"
 
 # EVALUATION
 evaluation = dict(interval=EVAL_LAG, metric="bbox")
-checkpoint_config = dict(interval=CHECKPOINT_LAG)
+checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=5)
 
 
 # RUNTIME

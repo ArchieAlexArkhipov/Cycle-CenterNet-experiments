@@ -216,7 +216,7 @@ model = dict(
         use_dcn=True,
     ),
     bbox_head=dict(
-        type="CycleCenterNetHeadL1",
+        type="CycleCenterNetHead",
         num_classes=1,
         in_channel=64,
         feat_channel=64,

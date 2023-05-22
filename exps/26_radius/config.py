@@ -1,11 +1,13 @@
-TEST_NAME = "23_long"
-EVAL_LAG = 30
-CHECKPOINT_LAG = 5
-EPOCHS = 150
+TEST_NAME = "26_radius_512_1024"
+EVAL_LAG = 1
+CHECKPOINT_LAG = 1
+EPOCHS = 2
 LR = 0.00125
 BACKBONE = "DLANetMMDet3D"
 BATCH = 8
 local_maximum_kernel = 1
+ITER_PERIOD = 4
+SCALE = 1024
 TAGS = [
     f"local_maximum_kernel={local_maximum_kernel}",
     "1hm",
@@ -48,7 +50,7 @@ data = dict(
                 to_rgb=True,
                 test_pad_mode=None,
             ),
-            dict(type="Resize", img_scale=(512, 512), keep_ratio=True),
+            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=True),
             dict(type="RandomFlip", flip_ratio=0.5),
             dict(
                 type="Normalize",
@@ -85,7 +87,7 @@ data = dict(
                 to_rgb=True,
                 test_pad_mode=None,
             ),
-            dict(type="Resize", img_scale=(512, 512), keep_ratio=True),
+            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=True),
             dict(type="RandomFlip", flip_ratio=0.5),
             dict(
                 type="Normalize",
@@ -232,7 +234,6 @@ model = dict(
     ),
     bbox_head=dict(
         type="CycleCenterNetHead",
-        num_classes=1,
         in_channel=64,
         feat_channel=64,
         loss_center_heatmap=dict(type="GaussianFocalLoss", loss_weight=1.0),
@@ -282,7 +283,7 @@ auto_scale_lr = dict(enable=False, base_batch_size=16)
 
 # LOGGING
 work_dir = f"/home/aiarhipov/centernet/exps/{TEST_NAME}"
-INTERVAL = int(10976 / (4 * BATCH)) + (10976 % (4 * BATCH) > 0)
+INTERVAL = int(10976 / (ITER_PERIOD * BATCH)) + (10976 % (ITER_PERIOD * BATCH) > 0)
 log_config = dict(
     interval=INTERVAL,
     hooks=[
@@ -299,7 +300,7 @@ log_config = dict(
             },
             interval=INTERVAL,
             log_checkpoint=True,
-            log_checkpoint_metadata=True,
+            log_checkpoint_metadata=False,
             num_eval_images=5,
         ),
     ],
@@ -309,7 +310,7 @@ log_level = "INFO"
 
 # EVALUATION
 evaluation = dict(interval=EVAL_LAG, metric="bbox")
-checkpoint_config = dict(interval=CHECKPOINT_LAG)
+checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=5)
 
 
 # RUNTIME
