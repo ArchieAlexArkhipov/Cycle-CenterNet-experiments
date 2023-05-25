@@ -1,13 +1,13 @@
-TEST_NAME = "27_seg"
+TEST_NAME = "29_seg_keep_ratio"
 EVAL_LAG = 1
 CHECKPOINT_LAG = 1
-EPOCHS = 15
+EPOCHS = 1
 LR = 0.00125
 BACKBONE = "DLANetMMDet3D"
 BATCH = 8
 local_maximum_kernel = 1
 ITER_PERIOD = 100
-SCALE = 512
+SCALE = 1024
 TAGS = [
     f"local_maximum_kernel={local_maximum_kernel}",
     "1hm",
@@ -212,7 +212,7 @@ data = dict(
 
 # MODEL CycleCenterNet(dcnv2) DLANetMMDet3D,
 load_from = None
-resume_from = "/home/aiarhipov/centernet/exps/27_seg/latest.pth"
+resume_from = None
 
 model = dict(
     type="CenterNet",
@@ -310,7 +310,7 @@ log_level = "INFO"
 
 # EVALUATION
 evaluation = dict(interval=EVAL_LAG, metric="bbox")
-checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=5)
+checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=1)
 
 
 # RUNTIME

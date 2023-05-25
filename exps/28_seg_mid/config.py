@@ -1,12 +1,12 @@
-TEST_NAME = "27_seg"
-EVAL_LAG = 1
+TEST_NAME = "28_seg_mid"
+EVAL_LAG = 150
 CHECKPOINT_LAG = 1
-EPOCHS = 15
+EPOCHS = 150
 LR = 0.00125
 BACKBONE = "DLANetMMDet3D"
 BATCH = 8
 local_maximum_kernel = 1
-ITER_PERIOD = 100
+ITER_PERIOD = 20
 SCALE = 512
 TAGS = [
     f"local_maximum_kernel={local_maximum_kernel}",
@@ -50,7 +50,7 @@ data = dict(
             #     to_rgb=True,
             #     test_pad_mode=None,
             # ),
-            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=True),
+            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=False),
             dict(type="RandomFlip", flip_ratio=0.5),
             dict(
                 type="Normalize",
@@ -87,7 +87,7 @@ data = dict(
             #     to_rgb=True,
             #     test_pad_mode=None,
             # ),
-            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=True),
+            dict(type="Resize", img_scale=(SCALE, SCALE), keep_ratio=False),
             dict(type="RandomFlip", flip_ratio=0.5),
             dict(
                 type="Normalize",
@@ -112,7 +112,7 @@ data = dict(
                 scale_factor=1.0,
                 flip=False,
                 transforms=[
-                    dict(type="Resize", keep_ratio=True),
+                    dict(type="Resize", keep_ratio=False),
                     # dict(
                     #     type="RandomCenterCropPad",
                     #     ratios=None,
@@ -165,7 +165,7 @@ data = dict(
                 scale_factor=1.0,
                 flip=False,
                 transforms=[
-                    dict(type="Resize", keep_ratio=True),
+                    dict(type="Resize", keep_ratio=False),
                     # dict(
                     #     type="RandomCenterCropPad",
                     #     ratios=None,
@@ -212,7 +212,7 @@ data = dict(
 
 # MODEL CycleCenterNet(dcnv2) DLANetMMDet3D,
 load_from = None
-resume_from = "/home/aiarhipov/centernet/exps/27_seg/latest.pth"
+resume_from = None
 
 model = dict(
     type="CenterNet",
@@ -310,7 +310,7 @@ log_level = "INFO"
 
 # EVALUATION
 evaluation = dict(interval=EVAL_LAG, metric="bbox")
-checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=5)
+checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=3)
 
 
 # RUNTIME
