@@ -15,7 +15,7 @@ import random
 
 
 def get_free_gpu(force_gpu=None):
-    if force_gpu:
+    if force_gpu != None:
         return force_gpu
     else:
         log = str(
@@ -38,7 +38,7 @@ cfg = Config.fromfile(f"/home/aiarhipov/centernet/exps/{argv[1]}config.py")
 
 
 set_random_seed(0, deterministic=False)
-cfg.gpu_ids = [get_free_gpu()]
+cfg.gpu_ids = [get_free_gpu(0)]
 val = True
 # Build dataset
 if len(argv) == 2:
