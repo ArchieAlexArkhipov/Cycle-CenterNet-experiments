@@ -66,6 +66,9 @@ def addAnnoItem(object_name, image_id, category_id, bbox, seg):
 
 
 def parseXmlFiles(XML_path, four_boxes=False, div=1, ddiv=1):
+    # count_boxes = 0
+    # wrong_boxes = 0
+    # wrong = []
     for xml_path in XML_path:
         for idx, f in enumerate(os.listdir(xml_path)):
             if idx % div == 0:
@@ -170,65 +173,46 @@ def parseXmlFiles(XML_path, four_boxes=False, div=1, ddiv=1):
                             if current_category_id is None:
                                 raise Exception("xml structure broken at bndbox tag")
                             if four_boxes:
-                                # if idx2 % ddiv == 0:
-                                # if idx2 < 100:
-                                # bbox = []
-                                # center_x = (seg[0] + seg[2] + seg[4] + seg[6]) / 4
-                                # center_y = (seg[1] + seg[3] + seg[5] + seg[7]) / 4
-                                # bbox.append(center_x)
-                                # bbox.append(center_y)
-                                # bbox.append(-seg[0])
-                                # bbox.append(-seg[1])
-                                # addAnnoItem(
-                                #     object_name,
-                                #     current_image_id,
-                                #     current_category_id,
-                                #     bbox,
-                                #     seg,
-                                # )
-                                # bbox = []
-                                # bbox.append(center_x)
-                                # bbox.append(center_y)
-                                # bbox.append(seg[2])
-                                # bbox.append(-seg[3])
-                                # addAnnoItem(
-                                #     object_name,
-                                #     current_image_id,
-                                #     current_category_id,
-                                #     bbox,
-                                #     seg,
-                                # )
-                                # bbox = []
-                                # bbox.append(center_x)
-                                # bbox.append(center_y)
-                                # bbox.append(seg[4])
-                                # bbox.append(seg[5])
-                                # addAnnoItem(
-                                #     object_name,
-                                #     current_image_id,
-                                #     current_category_id,
-                                #     bbox,
-                                #     seg,
-                                # )
-                                # bbox = []
-                                # bbox.append(center_x)
-                                # bbox.append(center_y)
-                                # bbox.append(-seg[6])
-                                # bbox.append(seg[7])
-                                # addAnnoItem(
-                                #     object_name,
-                                #     current_image_id,
-                                #     current_category_id,
-                                #     bbox,
-                                #     seg,
-                                # )
+                                x1, y1, x2, y2, x3, y3, x4, y4 = (
+                                    seg[0],
+                                    seg[1],
+                                    seg[2],
+                                    seg[3],
+                                    seg[4],
+                                    seg[5],
+                                    seg[6],
+                                    seg[7],
+                                )
+                                if (x1 < x2) and (x4 < x3) and (y1 < y4) and (y2 < y3):
+                                    pass
+                                else:
+                                    x1, y1, x2, y2, x3, y3, x4, y4 = (
+                                        bndbox["xmin"],
+                                        bndbox["ymin"],
+                                        bndbox["xmax"],
+                                        bndbox["ymin"],
+                                        bndbox["xmax"],
+                                        bndbox["ymax"],
+                                        bndbox["xmin"],
+                                        bndbox["ymax"],
+                                    )
+                                assert (
+                                    x1 < x2
+                                ), f"x1, y1, x2, y2, x3, y3, x4, y4 = {x1, y1, x2, y2, x3, y3, x4, y4}"
+                                assert (
+                                    x4 < x3
+                                ), f"x1, y1, x2, y2, x3, y3, x4, y4 = {x1, y1, x2, y2, x3, y3, x4, y4}"
+                                assert (
+                                    y1 < y4
+                                ), f"x1, y1, x2, y2, x3, y3, x4, y4 = {x1, y1, x2, y2, x3, y3, x4, y4}"
+                                assert (
+                                    y2 < y3
+                                ), f"x1, y1, x2, y2, x3, y3, x4, y4 = {x1, y1, x2, y2, x3, y3, x4, y4}"
                                 bbox = []
-                                center_x = (seg[0] + seg[2] + seg[4] + seg[6]) / 4
-                                center_y = (seg[1] + seg[3] + seg[5] + seg[7]) / 4
-                                bbox.append(seg[0])
-                                bbox.append(seg[1])
-                                bbox.append(center_x)
-                                bbox.append(center_y)
+                                bbox.append(x1)
+                                bbox.append(y1)
+                                bbox.append(x3 - x1)
+                                bbox.append(y3 - y1)
                                 addAnnoItem(
                                     object_name,
                                     current_image_id,
@@ -237,10 +221,10 @@ def parseXmlFiles(XML_path, four_boxes=False, div=1, ddiv=1):
                                     seg,
                                 )
                                 bbox = []
-                                bbox.append(center_x)
-                                bbox.append(seg[3])
-                                bbox.append(seg[2])
-                                bbox.append(center_y)
+                                bbox.append(x4)
+                                bbox.append(y2)
+                                bbox.append(x2 - x4)
+                                bbox.append(y4 - y2)
                                 addAnnoItem(
                                     object_name,
                                     current_image_id,
@@ -248,30 +232,7 @@ def parseXmlFiles(XML_path, four_boxes=False, div=1, ddiv=1):
                                     bbox,
                                     seg,
                                 )
-                                bbox = []
-                                bbox.append(center_x)
-                                bbox.append(center_y)
-                                bbox.append(seg[4])
-                                bbox.append(seg[5])
-                                addAnnoItem(
-                                    object_name,
-                                    current_image_id,
-                                    current_category_id,
-                                    bbox,
-                                    seg,
-                                )
-                                bbox = []
-                                bbox.append(seg[6])
-                                bbox.append(center_y)
-                                bbox.append(center_x)
-                                bbox.append(seg[7])
-                                addAnnoItem(
-                                    object_name,
-                                    current_image_id,
-                                    current_category_id,
-                                    bbox,
-                                    seg,
-                                )
+
                             else:
                                 bbox = []
                                 # x
