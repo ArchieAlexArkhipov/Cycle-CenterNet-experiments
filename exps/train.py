@@ -16,6 +16,7 @@ import random
 
 def get_free_gpu(force_gpu=None):
     if force_gpu != None:
+        print(f"Using {force_gpu} GPU!")
         return force_gpu
     else:
         log = str(
@@ -26,19 +27,21 @@ def get_free_gpu(force_gpu=None):
             if gpu_info[:-4].split(" %, ")[0] == "0" and gpu_info[:-4].split(" %, ")[1] == "3":
                 free_gpu.append(idx)
         if free_gpu:
-            return random.choice(free_gpu)
-        raise RuntimeError("All gpus are used")
+            gpu = random.choice(free_gpu)
+            print(f"Using {gpu} GPU!")
+            return gpu
+        raise ValueError("All gpus are used")
 
 
-os.environ["WANDB_CACHE_DIR"] = "/home/aiarhipov/.cache/wandb"
-os.environ["WANDB_CONFIG_DIR"] = "/home/aiarhipov/.config/wandb"
-os.environ["WANDB_DIR"] = "/home/aiarhipov/centernet/exps/wandb"
+# os.environ["WANDB_CACHE_DIR"] = "/home/aiarhipov/.cache/wandb"
+# os.environ["WANDB_CONFIG_DIR"] = "/home/aiarhipov/.config/wandb"
+# os.environ["WANDB_DIR"] = "/home/aiarhipov/centernet/exps/wandb"
 wandb.login()
 cfg = Config.fromfile(f"/home/aiarhipov/centernet/exps/{argv[1]}config.py")
 
 
 set_random_seed(0, deterministic=False)
-cfg.gpu_ids = [get_free_gpu(0)]
+cfg.gpu_ids = [get_free_gpu()]
 val = True
 # Build dataset
 if len(argv) == 2:

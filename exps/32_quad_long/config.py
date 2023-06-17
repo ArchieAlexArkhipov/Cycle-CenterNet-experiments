@@ -1,12 +1,12 @@
-TEST_NAME = "31_long_check"
-EVAL_LAG = 30
-CHECKPOINT_LAG = 5
+TEST_NAME = "32_quad_long"
+EVAL_LAG = 150
+CHECKPOINT_LAG = 1
 EPOCHS = 150
 LR = 0.00125
 BACKBONE = "DLANetMMDet3D"
 BATCH = 8
 local_maximum_kernel = 1
-LOG_LAG = 100
+ITER_PERIOD = 2
 TAGS = [
     f"local_maximum_kernel={local_maximum_kernel}",
     "1hm",
@@ -24,11 +24,12 @@ data_root = "/home/aiarhipov/datasets/WTW-dataset/"
 img_norm_cfg = dict(mean=[103.53, 116.28, 123.675], std=[1.0, 1.0, 1.0], to_rgb=False)
 
 data = dict(
+    # train_dataloader=dict(shuffle=),
     samples_per_gpu=BATCH,
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
-        ann_file="/home/aiarhipov/datasets/WTW-dataset/train/train.json",
+        ann_file="/home/aiarhipov/datasets/WTW-dataset/train/train_4x10.json",
         img_prefix="train/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True, color_type="color"),
@@ -65,7 +66,7 @@ data = dict(
     ),
     val_loss=dict(
         type=dataset_type,
-        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test.json",
+        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test_4x10.json",
         img_prefix="test/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True, color_type="color"),
@@ -102,7 +103,7 @@ data = dict(
     ),
     val=dict(
         type=dataset_type,
-        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test.json",
+        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test_4x10.json",
         img_prefix="test/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True),
@@ -155,7 +156,7 @@ data = dict(
     ),
     test=dict(
         type=dataset_type,
-        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test.json",
+        ann_file="/home/aiarhipov/datasets/WTW-dataset/test/test_4x10.json",
         img_prefix="test/images/",
         pipeline=[
             dict(type="LoadImageFromFile", to_float32=True),
@@ -211,7 +212,7 @@ data = dict(
 
 # MODEL CycleCenterNet(dcnv2) DLANetMMDet3D,
 load_from = None
-resume_from = None
+resume_from = "/home/aiarhipov/centernet/exps/32_quad_long/epoch_85.pth"
 
 model = dict(
     type="CenterNet",
@@ -235,6 +236,7 @@ model = dict(
         type="CycleCenterNetHead",
         in_channel=64,
         feat_channel=64,
+        num_classes=1,
         loss_center_heatmap=dict(type="GaussianFocalLoss", loss_weight=1.0),
         loss_offset=dict(type="L1Loss", loss_weight=1.0),
         loss_c2v=dict(type="L1Loss", loss_weight=1.0),
@@ -245,7 +247,6 @@ model = dict(
         topk=3000,
         local_maximum_kernel=local_maximum_kernel,
         max_per_img=3000,
-        # nms=dict(type="nms", iou_threshold=0.475, split_thr=2000),
     ),
 )
 
@@ -283,7 +284,7 @@ auto_scale_lr = dict(enable=False, base_batch_size=16)
 
 # LOGGING
 work_dir = f"/home/aiarhipov/centernet/exps/{TEST_NAME}"
-INTERVAL = int(10976 / (LOG_LAG * BATCH)) + (10976 % (LOG_LAG * BATCH) > 0)
+INTERVAL = int(10976 / (ITER_PERIOD * BATCH)) + (10976 % (ITER_PERIOD * BATCH) > 0)
 log_config = dict(
     interval=INTERVAL,
     hooks=[
@@ -310,7 +311,7 @@ log_level = "INFO"
 
 # EVALUATION
 evaluation = dict(interval=EVAL_LAG, metric="bbox")
-checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=5)
+checkpoint_config = dict(interval=CHECKPOINT_LAG, max_keep_ckpts=1)
 
 
 # RUNTIME
