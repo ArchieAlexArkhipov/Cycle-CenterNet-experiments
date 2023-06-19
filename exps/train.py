@@ -33,9 +33,6 @@ def get_free_gpu(force_gpu=None):
         raise ValueError("All gpus are used")
 
 
-# os.environ["WANDB_CACHE_DIR"] = "/home/aiarhipov/.cache/wandb"
-# os.environ["WANDB_CONFIG_DIR"] = "/home/aiarhipov/.config/wandb"
-# os.environ["WANDB_DIR"] = "/home/aiarhipov/centernet/exps/wandb"
 wandb.login()
 cfg = Config.fromfile(f"/home/aiarhipov/centernet/exps/{argv[1]}config.py")
 

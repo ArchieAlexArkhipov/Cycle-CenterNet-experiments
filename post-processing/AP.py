@@ -1,19 +1,3 @@
-"""
-author: Timothy C. Arlen
-date: 28 Feb 2018
-
-Calculate Mean Average Precision (mAP) for a set of bounding boxes corresponding to specific
-image Ids. Usage:
-
-> python calculate_mean_ap.py
-
-Will display a plot of precision vs recall curves at 10 distinct IoU thresholds as well as output
-summary information regarding the average precision and mAP scores.
-
-NOTE: Requires the files `ground_truth_boxes.json` and `predicted_boxes.json` which can be
-downloaded fromt this gist.
-"""
-
 from __future__ import absolute_import, division, print_function
 
 import json
@@ -23,6 +7,8 @@ from copy import deepcopy
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+
+from shapely.geometry import box, Polygon
 
 sns.set_style("white")
 sns.set_context("poster")
@@ -70,13 +56,9 @@ def calc_iou_individual(pred_box, gt_box):
     x1_p, y1_p, x2_p, y2_p = pred_box
 
     if (x1_p > x2_p) or (y1_p > y2_p):
-        raise AssertionError(
-            "Prediction box is malformed? pred box: {}".format(pred_box)
-        )
+        raise AssertionError("Prediction box is malformed? pred box: {}".format(pred_box))
     if (x1_t > x2_t) or (y1_t > y2_t):
-        raise AssertionError(
-            "Ground Truth box is malformed? true box: {}".format(gt_box)
-        )
+        raise AssertionError("Ground Truth box is malformed? true box: {}".format(gt_box))
 
     if x2_t < x1_p or x2_p < x1_t or y2_t < y1_p or y2_p < y1_t:
         return 0.0
@@ -93,7 +75,39 @@ def calc_iou_individual(pred_box, gt_box):
     return iou
 
 
-def get_single_image_results(gt_boxes, pred_boxes, iou_thr):
+def calc_iou_individual_quad(pred_box, gt_box):
+    """Calculate IoU of single predicted and ground truth box
+
+    Args:
+        pred_box (list of floats): location of predicted object as
+            [pred_tl_x, pred_tl_y, pred_tl_x, pred_tr_y, pred_br_x, pred_br_y, pred_bl_x, pred_bl_y]
+        gt_box (list of floats): location of ground truth object as
+            [gt_tl_x, gt_tl_y, gt_tr_x, gt_tr_y, gt_br_x, gt_br_y, gt_bl_x, gt_bl_y]
+
+    Returns:
+        float: value of the IoU for the two boxes.
+
+    Raises:
+        AssertionError: if the box is obviously malformed
+    """
+    # gt_tl_x, gt_tl_y, gt_tr_x, gt_tr_y, gt_br_x, gt_br_y, gt_bl_x, gt_bl_y = gt_box[:8]
+    # pred_tl_x, pred_tl_y, pred_tl_x, pred_tr_y, pred_br_x, pred_br_y, pred_bl_x, pred_bl_y = pred_box[:8]
+
+    # Define Each polygon
+    pol1_xy = pred_box.reshape((-1, 2))
+    pol2_xy = gt_box.reshape((-1, 2))
+    polygon1_shape = Polygon(pol1_xy)
+    polygon2_shape = Polygon(pol2_xy)
+
+    # Calculate Intersection and union, and tne IOU
+    polygon_intersection = polygon1_shape.intersection(polygon2_shape).area
+    polygon_union = polygon1_shape.union(polygon2_shape).area
+    IOU = polygon_intersection / polygon_union
+
+    return IOU
+
+
+def get_single_image_results(gt_boxes, pred_boxes, iou_thr, quad=False):
     """Calculates number of true_pos, false_pos, false_neg from single batch of boxes.
 
     Args:
@@ -126,7 +140,7 @@ def get_single_image_results(gt_boxes, pred_boxes, iou_thr):
     ious = []
     for ipb, pred_box in enumerate(pred_boxes):
         for igb, gt_box in enumerate(gt_boxes):
-            iou = calc_iou_individual(pred_box, gt_box)
+            iou = calc_iou_individual_quad(pred_box, gt_box) if quad else calc_iou_individual(pred_box, gt_box)
             if iou > iou_thr:
                 gt_idx_thr.append(igb)
                 pred_idx_thr.append(ipb)
@@ -238,12 +252,8 @@ def get_avg_precision_at_iou(gt_boxes, pred_boxes, iou_thr=0.5):
     # Sort the predicted boxes in descending order (lowest scoring boxes first):
     for img_id in pred_boxes.keys():
         arg_sort = np.argsort(pred_boxes[img_id]["scores"])
-        pred_boxes[img_id]["scores"] = np.array(pred_boxes[img_id]["scores"])[
-            arg_sort
-        ].tolist()
-        pred_boxes[img_id]["boxes"] = np.array(pred_boxes[img_id]["boxes"])[
-            arg_sort
-        ].tolist()
+        pred_boxes[img_id]["scores"] = np.array(pred_boxes[img_id]["scores"])[arg_sort].tolist()
+        pred_boxes[img_id]["boxes"] = np.array(pred_boxes[img_id]["boxes"])[arg_sort].tolist()
 
     pred_boxes_pruned = deepcopy(pred_boxes)
 
@@ -254,9 +264,7 @@ def get_avg_precision_at_iou(gt_boxes, pred_boxes, iou_thr=0.5):
     # Loop over model score thresholds and calculate precision, recall
     for ithr, model_score_thr in enumerate(sorted_model_scores[:-1]):
         # On first iteration, define img_results for the first time:
-        img_ids = (
-            gt_boxes.keys() if ithr == 0 else model_scores_map[model_score_thr]
-        )
+        img_ids = gt_boxes.keys() if ithr == 0 else model_scores_map[model_score_thr]
         for img_id in img_ids:
             gt_boxes_img = gt_boxes[img_id]
             box_scores = pred_boxes_pruned[img_id]["scores"]
@@ -269,12 +277,8 @@ def get_avg_precision_at_iou(gt_boxes, pred_boxes, iou_thr=0.5):
                     break
 
             # Remove boxes, scores of lower than threshold scores:
-            pred_boxes_pruned[img_id]["scores"] = pred_boxes_pruned[img_id][
-                "scores"
-            ][start_idx:]
-            pred_boxes_pruned[img_id]["boxes"] = pred_boxes_pruned[img_id][
-                "boxes"
-            ][start_idx:]
+            pred_boxes_pruned[img_id]["scores"] = pred_boxes_pruned[img_id]["scores"][start_idx:]
+            pred_boxes_pruned[img_id]["boxes"] = pred_boxes_pruned[img_id]["boxes"][start_idx:]
 
             # Recalculate image results for this image
             img_results[img_id] = get_single_image_results(
@@ -306,9 +310,7 @@ def get_avg_precision_at_iou(gt_boxes, pred_boxes, iou_thr=0.5):
     }
 
 
-def plot_pr_curve(
-    precisions, recalls, category="Person", label=None, color=None, ax=None
-):
+def plot_pr_curve(precisions, recalls, category="Person", label=None, color=None, ax=None):
     """Simple plotting helper function"""
 
     if ax is None:
@@ -327,7 +329,6 @@ def plot_pr_curve(
 
 
 if __name__ == "__main__":
-
     with open("ground_truth_boxes.json") as infile:
         gt_boxes = json.load(infile)
 
@@ -339,9 +340,7 @@ if __name__ == "__main__":
     start_time = time.time()
     data = get_avg_precision_at_iou(gt_boxes, pred_boxes, iou_thr=iou_thr)
     end_time = time.time()
-    print(
-        "Single IoU calculation took {:.4f} secs".format(end_time - start_time)
-    )
+    print("Single IoU calculation took {:.4f} secs".format(end_time - start_time))
     print("avg precision: {:.4f}".format(data["avg_prec"]))
 
     start_time = time.time()
@@ -373,9 +372,5 @@ if __name__ == "__main__":
     for xval in np.linspace(0.0, 1.0, 11):
         plt.vlines(xval, 0.0, 1.1, color="gray", alpha=0.3, linestyles="dashed")
     end_time = time.time()
-    print(
-        "\nPlotting and calculating mAP takes {:.4f} secs".format(
-            end_time - start_time
-        )
-    )
+    print("\nPlotting and calculating mAP takes {:.4f} secs".format(end_time - start_time))
     plt.show()
